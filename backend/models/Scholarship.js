@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const { Schema, models, model } = mongoose;
 
-const scholarshipSchema = new mongoose.Schema({
+const scholarshipSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -25,24 +26,19 @@ const scholarshipSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    timestamps: {
-        created_at: {
-            type: Date,
-            default: Date.now
-        },
-        updated_at: {
-            type: Date,
-            default: Date.now
-        },
-        created_by: {
-            type: String,
-        },
-        updated_by: {
-            type: String,
-        }
-    }
+    created_by: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    updated_by: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+}, {
+    timestamps: true,
+    strictQuery: true
 });
 
-const Scholarship = mongoose.model('Scholarship', scholarshipSchema);
-
-module.exports = Scholarship;
+module.exports = models.Scholarship || model('Scholarship', scholarshipSchema);

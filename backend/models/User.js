@@ -54,16 +54,9 @@ const UserSchema = new Schema({
         // ^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}$
         match: [/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()\-_=+{};:,<.>]).{8,}$/, "Please enter a valid password"]
     },
-    createdBy: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    },
-    updatedBy: {
-        type: Schema.Types.ObjectId,
-        ref: 'User'
-    }
 }, {
-    timestamps: true
+    timestamps: true,
+    strictQuery: true
 });
 
-export default models.User || model('User', UserSchema);
+module.exports = models.User || model('User', UserSchema);

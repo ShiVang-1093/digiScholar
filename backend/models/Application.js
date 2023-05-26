@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
+const { Schema, models, model } = mongoose;
 
-const applicationSchema = new mongoose.Schema({
+const applicationSchema = new Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
@@ -22,14 +23,11 @@ const applicationSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    timestamps: {
-        type: Date,
-        default: Date.now
-    }
+}, {
+    timestamps: true,
+    strictQuery: true
 });
 
 applicationSchema.index({ user_id: 1, scholarship_id: 1 }, { unique: true });
 
-const Application = mongoose.model('Application', applicationSchema);
-
-module.exports = Application;
+module.exports = models.Application || model('Application', applicationSchema);
