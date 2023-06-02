@@ -1,3 +1,10 @@
 export const User = require('./User');
 export const Scholarship = require('./Scholarship');
+export const Eligibility = require('./Eligibility')
 export const Application = require('./Application');
+export const FAQs = require('./FAQs')
+export const Resource = require('./Resource')
+export const News = require('./News')
+export const Testimonial = require('./Testimonial')
+export const Blog = require('./Blog')
+export const Contact = require('./Contact')

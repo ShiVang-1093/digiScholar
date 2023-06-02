@@ -22,7 +22,7 @@ exports.registerUser = async (req, res) => {
             user: {
                 id: user._id
             }
-        }
+        };
 
         jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 360000 }, (err, token) => {
             if (err) throw err;
@@ -34,7 +34,7 @@ exports.registerUser = async (req, res) => {
         res.status(500).json({ msg: 'Server Error' });
     }
 
-}
+};
 
 exports.loginUser = async (req, res) => {
 
@@ -55,7 +55,7 @@ exports.loginUser = async (req, res) => {
             user: {
                 id: user._id
             }
-        }
+        };
 
         jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 360000 }, (err, token) => {
             if (err) throw err;
@@ -68,7 +68,7 @@ exports.loginUser = async (req, res) => {
         res.status(500).json({ msg: 'Server Error' });
     }
 
-}
+};
 
 exports.getUser = async (req, res) => {
     try {
