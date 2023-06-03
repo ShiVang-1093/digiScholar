@@ -1,35 +1,20 @@
 const mongoose = require('mongoose');
+const { Schema, models, model } = mongoose;
 
-const applicationSchema = new mongoose.Schema({
-    user_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required: true
+const applicationSchema = new Schema({
+    scholarship: {
+        type: Schema.Types.ObjectId,
+        ref: 'Scholarship'
     },
-    scholarship_id: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Scholarship',
-        required: true
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
     },
-    isApproved: {
-        type: Boolean,
-        default: false
-    },
-    comments: {
-        type: String
-    },
-    isMoneyTransfered: {
-        type: Boolean,
-        default: false
-    },
-    timestamps: {
-        type: Date,
-        default: Date.now
+    status: {
+        type: String,
+        enum: ['pending', 'approved', 'rejected'],
+        default: 'pending'
     }
-});
+}, { timestamps: true });
 
-applicationSchema.index({ user_id: 1, scholarship_id: 1 }, { unique: true });
-
-const Application = mongoose.model('Application', applicationSchema);
-
-module.exports = Application;
+module.exports = models.Application || model('Application', applicationSchema);

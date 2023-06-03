@@ -1,10 +1,8 @@
-import mongoose from 'mongoose';
-import dotenv from 'dotenv';
-dotenv.config({ path: './.env' });
+const mongoose = require('mongoose');
 
 let isConnected = false;
 
-export const connectToDatabase = async () => {
+exports.connectToDatabase = async () => {
     mongoose.set('strictQuery', true);
     if (isConnected) {
         console.log('MongoDB is already connected');
@@ -22,4 +20,4 @@ export const connectToDatabase = async () => {
     } catch (error) {
         console.log(error);
     }
-}
+};
