@@ -5,9 +5,11 @@ import "./SignupPage.css";
 function SignupPage() {
   const [formData, setFormData] = useState({
     firstname: '',
+    middlename: '',
     lastname: '',
     email: '',
     contactno: Number(),
+    institute:'',
     password: '',
 
   });
@@ -27,7 +29,9 @@ function SignupPage() {
     if (formData.email === '' || 
         formData.password === '' || 
         formData.firstname === ''  || 
+        formData.middlename === ''  || 
         formData.lastname === '' || 
+        formData.institute === '' || 
         formData.contactno === '') {
       // setError("Please fill in both email and password fields.");
       alert('Please fill up all fields.');
@@ -41,13 +45,16 @@ function SignupPage() {
       return;
     }
     console.log('firstname:', formData.firstname);
+    console.log('middlename:', formData.middlename);
     console.log('lastname:', formData.lastname);
     console.log('Email:', formData.email);
     console.log('contact:', formData.contactno);
+    console.log('institute:', formData.institute);
     console.log('Password:', formData.password);
 
     setFormData({
         firstname: '',
+        middlename: '',
         lastname: '',
         email: '',
         contactno: '',
@@ -114,6 +121,16 @@ function SignupPage() {
               value={formData.firstname}
             />
           </label>
+        <label>
+            <div className="mname">Middle name</div>
+            <input
+              type="middlename"
+              name="middlename"
+              onChange={handleChange} 
+              required placeholder="Enter your Middle name"
+              value={formData.middlename}
+            />
+          </label>
           <label>
             <div className="lname">Last name</div>
             <input
@@ -147,6 +164,17 @@ function SignupPage() {
             />
           </label>
           <br/>
+          <label>
+            <div className="institute">Institute</div>
+            <input
+              type="text"
+              name="institute"
+              onChange={handleChange} 
+              required placeholder="Charusat University"
+              value={formData.institute}
+            />
+          </label>
+          <br />
           <label>
           <div className="pwd">Password</div>
             <input
