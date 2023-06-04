@@ -1,4 +1,4 @@
 module.exports = {
-    authMiddleware: require('./auth.middleware'),
-    adminMiddleware: require('./admin.middleware'),
+    isLoggedIn: require('./auth.middleware'),
+    isAdmin: require('./admin.middleware'),
 };

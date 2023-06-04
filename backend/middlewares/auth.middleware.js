@@ -1,7 +1,7 @@
 require('dotenv').config({ path: '../.env' });
 const jwt = require('jsonwebtoken');
 
-const authMiddleware = (req, res, next) => {
+const isLoggedIn = (req, res, next) => {
     try {
         const token = req.headers.authorization.split(' ')[1];
 
@@ -28,4 +28,4 @@ const authMiddleware = (req, res, next) => {
     }
 };
 
-module.exports = authMiddleware;
+module.exports = isLoggedIn;

@@ -24,7 +24,7 @@ const userSchema = new Schema({
         minlength: 3,
         maxlength: 50,
         unique: true,
-        match: /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
+        match: /^([\w-\\.]+@([\w-]+\.)+[\w-]{2,4})?$/
     },
     password: {
         type: String,

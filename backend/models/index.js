@@ -1,10 +1,12 @@
-export const User = require('./User');
-export const Scholarship = require('./Scholarship');
-export const Eligibility = require('./Eligibility')
-export const Application = require('./Application');
-export const FAQs = require('./FAQs')
-export const Resource = require('./Resource')
-export const News = require('./News')
-export const Testimonial = require('./Testimonial')
-export const Blog = require('./Blog')
-export const Contact = require('./Contact')
+module.exports = {
+    User: require('./User'),
+    Scholarship: require('./Scholarship'),
+    Eligibility: require('./Eligibility'),
+    Application: require('./Application'),
+    FAQs: require('./FAQs'),
+    Resource: require('./Resource'),
+    News: require('./News'),
+    Testimonial: require('./Testimonial'),
+    Blog: require('./Blog'),
+    Contact: require('./Contact')
+};
