@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 const { Schema, models, model } = mongoose;
-const { Eligibility, Application, FAQs, Resource, Testimonial } = require('.');
+const { Eligibility } = require('./Eligibility');
+const { Application } = require('./Application');
+const { FAQ } = require('./FAQ');
+const { Resource } = require('./Resource');
+const { Testimonial } = require('./Testimonial');
 
 const scholarshipSchema = new Schema({
     name: {
@@ -47,7 +51,7 @@ scholarshipSchema.pre('remove', async function (next) {
         const scholarship = this;
         await Eligibility.findByIdAndDelete(scholarship.eligibility);
         await Application.deleteMany({ scholarship: scholarship._id });
-        await FAQs.deleteMany({ scholarship: scholarship._id });
+        await FAQ.deleteMany({ scholarship: scholarship._id });
         await Resource.deleteMany({ scholarship: scholarship._id });
         await Testimonial.deleteMany({ scholarship: scholarship._id });
         next();

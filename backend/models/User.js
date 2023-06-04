@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema, models, model } = mongoose;
-const { Application, Testimonial, Contact } = require('.');
+const Application = require('./Application');
+const Testimonial = require('./Testimonial');
+const Contact = require('./Contact');
 
 const userSchema = new Schema({
     fname: {

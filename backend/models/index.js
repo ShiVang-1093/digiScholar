@@ -3,10 +3,10 @@ module.exports = {
     Scholarship: require('./Scholarship'),
     Eligibility: require('./Eligibility'),
     Application: require('./Application'),
-    FAQs: require('./FAQs'),
+    FAQ: require('./FAQ'),
     Resource: require('./Resource'),
     News: require('./News'),
     Testimonial: require('./Testimonial'),
     Blog: require('./Blog'),
-    Contact: require('./Contact')
+    Contact: require('./Contact'),
 };
