@@ -158,7 +158,7 @@ body{
   
 .img{    
     width: 300px;
-    height: 350px;
+    height: 325px;
     margin-top: 50%;
     margin-left: 11%;
 }
@@ -190,13 +190,22 @@ body{
     font-weight: 600;
     font-size:60%;
   }
+  .mname{
+    position: absolute;
+    left:35%;
+    top:23%; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+  }
   .lname{
     position: absolute;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
     font-size:60%;
-    left: 45%;
+    left: 66%;
     top: 23%;
   }
   .mail{
@@ -216,6 +225,15 @@ body{
     /* font-weight: 600; */
     font-size:60%;
     left: 4%;
+    top: 49%;
+  }
+  .institute{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size:60%;
+    left: 40%;
     top: 49%;
   }
   .pwd{
@@ -238,12 +256,20 @@ input[type="firstname"] {
     left: 4%;
     top: 28%;
 }
+input[type="middlename"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 35%;
+    top: 28%;
+}
 input[type="lastname"] {
     width: 25%;
     border-radius: 11px;
     height: 2rem;
     position: absolute;
-    left: 45%;
+    left: 66%;
     top: 28%;
 }
 input[type="email"] {
@@ -258,7 +284,15 @@ input[type="contactno"] {
     position: absolute;
     top: 54%;
     left: 4%;
-    width: 72%;
+    width: 30%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="text"] {
+    position: absolute;
+    top: 54%;
+    left: 40%;
+    width: 30%;
     border-radius: 11px;
     height: 2rem;
 }

@@ -76,14 +76,7 @@ input[type="email"] {
 }
 
 input[type="password"] {
-  /* margin-left: 2.5%;
-  font-family: 'Inter';
-  width: 65%;
-  margin-top: -8.5%;
-  border-radius: 11px;
-  height: 35px; */
-
-  position: absolute;
+    position: absolute;
     top: 67%;
     margin-left: 2.5%;
     width: 72%;
