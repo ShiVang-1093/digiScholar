@@ -16,7 +16,7 @@ const { contactController: {
 
 router.get('/', isLoggedIn, isAdmin, getContacts);
 router.get('/:id', isLoggedIn, isAdmin, getContact);
-router.post('/', createContact);
+router.post('/', isLoggedIn, createContact);
 router.put('/:id', isLoggedIn, isAdmin, updateContact);
 router.delete('/:id', isLoggedIn, isAdmin, deleteContact);
 

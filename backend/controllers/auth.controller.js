@@ -116,8 +116,6 @@ exports.getUser = async (req, res) => {
         // Access the user ID from the authenticated request
         const userId = req.user.id;
 
-        console.log('User ID:', req.user);
-
         // Find the user in the database
         const user = await User.findById(userId);
 
@@ -144,18 +142,15 @@ exports.updateUser = async (req, res) => {
             return res.status(404).json({ error: 'User not found' });
         }
 
-        // Update the user's information
-        user.fname = req.body.fname || user.fname;
-        user.mname = req.body.mname || user.mname;
-        user.lname = req.body.lname || user.lname;
-        user.institute = req.body.institute || user.institute;
-        user.email = req.body.email || user.email;
-        user.contact = req.body.contact || user.contact;
+        req.body.isAdmin = user.isAdmin;
 
-        // Save the updated user to the database
-        await user.save();
+        const result = await User.findByIdAndUpdate(
+            userId,
+            req.body,
+            { new: true }
+        );
 
-        return res.status(200).json(user);
+        return res.status(200).json(result);
     } catch (error) {
         console.error('Error updating user:', error);
         return res.status(500).json({ error: 'Internal server error' });

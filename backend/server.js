@@ -7,6 +7,9 @@ dotenv.config({ path: './.env' });
 const { connectToDatabase } = require('./db.js');
 const {
     authRoutes,
+    contactRoutes,
+    faqRoutes,
+    resourceRoutes,
     newsRoutes,
     testimonialRoutes,
 } = require('./routes');
@@ -19,6 +22,9 @@ app.use(express.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 
 app.use('/auth', authRoutes);
+app.use('/contact', contactRoutes);
+app.use('/faq', faqRoutes);
+app.use('/resource', resourceRoutes);
 app.use('/news', newsRoutes);
 app.use('/testimonial', testimonialRoutes);
 
@@ -33,5 +39,3 @@ connectToDatabase()
         });
     })
     .catch((error) => console.log(error));
-
-app.use('/api/auth', authRoutes);

@@ -2,6 +2,7 @@ const { Contact } = require('../models');
 
 exports.createContact = async (req, res) => {
     try {
+        req.body.created_by = req.user.id;
         const contact = await Contact.create(req.body);
         res.status(201).json({ contact });
     } catch (error) {

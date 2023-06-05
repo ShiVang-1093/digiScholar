@@ -1,22 +1,14 @@
 require('dotenv').config({ path: '../.env' });
 const jwt = require('jsonwebtoken');
+const { User } = require('../models');
 
 const isAdmin = (req, res, next) => {
     try {
-        const token = req.headers.authorization.split(' ')[1];
-
-        if (!token) {
-            return res.status(401).json({ error: 'Unauthorized' });
-        }
-
-        // Verify the JWT token
-        const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
-
-        // Attach the decoded token to the request object
-        req.user = decodedToken.user;
-
-        if (!req.user.isAdmin) {
-            return res.status(403).json({ error: 'Forbidden' });
+        console.log(req.user.id);
+        const user = User.findById(req.user.id);
+        console.log(user.isAdmin);
+        if (!user.isAdmin) {
+            return res.status(403).json({ error: 'User is not Admin' });
         }
 
         next();

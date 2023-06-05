@@ -32,61 +32,66 @@ const userSchema = new Schema({
         type: String,
         required: true,
         trim: true,
-        minlength: 3,
-        maxlength: 50
     },
     age: {
         type: Number,
-        required: true,
+        // required: true,
         trim: true,
         min: 10,
         max: 100
     },
     gender: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 10
     },
     cast: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     income: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     city: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     state: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     education: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
+    institute: {
+        type: String,
+        // required: true,
+        trim: true,
+        minlength: 3,
+        maxlength: 50
+    },
     contact: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
