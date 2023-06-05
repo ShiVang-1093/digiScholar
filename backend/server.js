@@ -11,6 +11,7 @@ dotenv.config({ path: './.env' });
 const { connectToDatabase } = require('./db.js');
 const {
     authRoutes,
+    scholarshipRoutes,
     blogRoutes,
     contactRoutes,
     faqRoutes,
@@ -43,6 +44,7 @@ app.use(upload.fields([
 ]));
 
 app.use('/auth', authRoutes);
+app.use('/scholarship', scholarshipRoutes);
 app.use('/blog', blogRoutes);
 app.use('/contact', contactRoutes);
 app.use('/faq', faqRoutes);

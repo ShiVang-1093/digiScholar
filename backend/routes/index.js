@@ -1,5 +1,6 @@
 module.exports = {
     authRoutes: require('./auth.routes'),
+    scholarshipRoutes: require('./scholarship.routes'),
     blogRoutes: require('./blog.routes'),
     contactRoutes: require('./contact.routes'),
     faqRoutes: require('./faq.routes'),
