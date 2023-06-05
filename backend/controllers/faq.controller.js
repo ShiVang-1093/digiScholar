@@ -2,6 +2,7 @@ const { FAQ } = require('../models');
 
 exports.createFAQ = async (req, res) => {
     try {
+        req.body.created_by = req.user.id;
         const faq = await FAQ.create(req.body);
         res.status(201).json({ faq });
     } catch (error) {

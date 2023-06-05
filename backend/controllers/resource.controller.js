@@ -1,10 +1,12 @@
-const { Resource } = require('../models/Resource');
+const { Resource } = require('../models');
 
 exports.createResource = async (req, res) => {
     try {
+        req.body.created_by = req.user.id;
         const resource = await Resource.create(req.body);
         res.status(201).json({ resource });
     } catch (error) {
+        console.log(error);
         res.status(500).json({ error });
     }
 };

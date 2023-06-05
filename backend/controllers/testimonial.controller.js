@@ -2,6 +2,7 @@ const { Testimonial } = require('../models');
 
 exports.createTestimonial = async (req, res) => {
     try {
+        req.body.created_by = req.user.id;
         const testimonial = await Testimonial.create(req.body);
         res.status(201).json({ testimonial });
     } catch (error) {

@@ -2,6 +2,7 @@ const { News } = require('../models');
 
 exports.createNews = async (req, res) => {
     try {
+        req.body.created_by = req.user.id;
         const news = await News.create(req.body);
         res.status(201).json({ news });
     } catch (error) {
