@@ -1,11 +1,25 @@
 require('dotenv').config({ path: '../.env' });
-const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { User } = require('../models');
 
 exports.registerUser = async (req, res) => {
 
-    const { fname, mname, lname, institute, email, contact, password } = req.body;
+    const {
+        fname,
+        lname,
+        email,
+        password,
+        confirm_password,
+        age,
+        gender,
+        cast,
+        income,
+        city,
+        state,
+        education,
+        contact
+    } = req.body;
 
     try {
         let user = await User.findOne({ email });
@@ -13,7 +27,26 @@ exports.registerUser = async (req, res) => {
             return res.status(400).json({ msg: 'User already exists' });
         }
 
-        user = new User({ fname, mname, lname, institute, email, contact, password });
+        user = new User({
+            fname,
+            lname,
+            email,
+            password,
+            confirm_password,
+            age,
+            gender,
+            cast,
+            income,
+            city,
+            state,
+            education,
+            contact
+        });
+
+        if (password !== confirm_password) {
+            return res.status(400).json({ msg: 'Password does not match' });
+        }
+
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
         await user.save();
@@ -24,10 +57,14 @@ exports.registerUser = async (req, res) => {
             }
         };
 
-        jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 360000 }, (err, token) => {
-            if (err) throw err;
-            res.json({ token });
-        });
+        jwt.sign(
+            payload,
+            process.env.JWT_SECRET,
+            { expiresIn: 360000 },
+            (err, token) => {
+                if (err) throw err;
+                res.json({ token });
+            });
 
     } catch (err) {
         console.error(err.message);
@@ -57,10 +94,14 @@ exports.loginUser = async (req, res) => {
             }
         };
 
-        jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: 360000 }, (err, token) => {
-            if (err) throw err;
-            res.json({ token });
-        }
+        jwt.sign(
+            payload,
+            process.env.JWT_SECRET,
+            { expiresIn: 360000 },
+            (err, token) => {
+                if (err) throw err;
+                res.json({ token });
+            }
         );
 
     } catch (err) {
@@ -72,9 +113,8 @@ exports.loginUser = async (req, res) => {
 
 exports.getUser = async (req, res) => {
     try {
-        const userId = req.user.id; // Access the user ID from the authenticated request
-
-        console.log('User ID:', req.user);
+        // Access the user ID from the authenticated request
+        const userId = req.user.id;
 
         // Find the user in the database
         const user = await User.findById(userId);
@@ -90,4 +130,29 @@ exports.getUser = async (req, res) => {
     }
 };
 
+exports.updateUser = async (req, res) => {
+    try {
+        // Access the user ID from the authenticated request
+        const userId = req.user.id;
 
+        // Find the user in the database
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        req.body.isAdmin = user.isAdmin;
+
+        const result = await User.findByIdAndUpdate(
+            userId,
+            req.body,
+            { new: true }
+        );
+
+        return res.status(200).json(result);
+    } catch (error) {
+        console.error('Error updating user:', error);
+        return res.status(500).json({ error: 'Internal server error' });
+    }
+};

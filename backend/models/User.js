@@ -1,6 +1,8 @@
 const mongoose = require('mongoose');
 const { Schema, models, model } = mongoose;
-const { Application, Testimonial, Contact } = require('.');
+const Application = require('./Application');
+const Testimonial = require('./Testimonial');
+const Contact = require('./Contact');
 
 const userSchema = new Schema({
     fname: {
@@ -24,67 +26,72 @@ const userSchema = new Schema({
         minlength: 3,
         maxlength: 50,
         unique: true,
-        match: /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/
+        match: /^([\w-\\.]+@([\w-]+\.)+[\w-]{2,4})?$/
     },
     password: {
         type: String,
         required: true,
         trim: true,
-        minlength: 3,
-        maxlength: 50
     },
     age: {
         type: Number,
-        required: true,
+        // required: true,
         trim: true,
         min: 10,
         max: 100
     },
     gender: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 10
     },
     cast: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     income: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     city: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     state: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
     education: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
     },
+    institute: {
+        type: String,
+        // required: true,
+        trim: true,
+        minlength: 3,
+        maxlength: 50
+    },
     contact: {
         type: String,
-        required: true,
+        // required: true,
         trim: true,
         minlength: 3,
         maxlength: 20
