@@ -2,11 +2,9 @@ require('dotenv').config({ path: '../.env' });
 const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
-const isAdmin = (req, res, next) => {
+const isAdmin = async (req, res, next) => {
     try {
-        console.log(req.user.id);
-        const user = User.findById(req.user.id);
-        console.log(user.isAdmin);
+        const user = await User.findById(req.user.id);
         if (!user.isAdmin) {
             return res.status(403).json({ error: 'User is not Admin' });
         }
