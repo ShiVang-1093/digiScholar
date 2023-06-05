@@ -13,6 +13,7 @@ const {
     authRoutes,
     scholarshipRoutes,
     eligibilityRoutes,
+    applicationRoutes,
     blogRoutes,
     contactRoutes,
     faqRoutes,
@@ -47,6 +48,7 @@ app.use(upload.fields([
 app.use('/auth', authRoutes);
 app.use('/scholarship', scholarshipRoutes);
 app.use('/eligibility', eligibilityRoutes);
+app.use('/application', applicationRoutes);
 app.use('/blog', blogRoutes);
 app.use('/contact', contactRoutes);
 app.use('/faq', faqRoutes);
@@ -55,7 +57,7 @@ app.use('/news', newsRoutes);
 app.use('/testimonial', testimonialRoutes);
 
 app.use('*', (req, res) => {
-    res.status(404).json({ message: 'Page not found' });
+    return res.status(404).json({ message: 'Page not found' });
 });
 
 connectToDatabase()

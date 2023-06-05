@@ -4,27 +4,27 @@ exports.createEligibility = async (req, res) => {
     try {
         req.body.created_by = req.user.id;
         const eligibility = await Eligibility.create(req.body);
-        res.status(201).json({ eligibility });
+        return res.status(201).json({ eligibility });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 
 exports.getEligibilities = async (req, res) => {
     try {
         const eligibilities = await Eligibility.find();
-        res.status(200).json({ eligibilities });
+        return res.status(200).json({ eligibilities });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 
 exports.getEligibility = async (req, res) => {
     try {
         const eligibility = await Eligibility.findById(req.params.id);
-        res.status(200).json({ eligibility });
+        return res.status(200).json({ eligibility });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 
@@ -33,9 +33,9 @@ exports.getEligibilityByScholarship = async (req, res) => {
         const eligibility = await Eligibility.findOne({
             scholarship: req.params.id
         });
-        res.status(200).json({ eligibility });
+        return res.status(200).json({ eligibility });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 
@@ -46,17 +46,17 @@ exports.updateEligibility = async (req, res) => {
             req.body,
             { new: true }
         );
-        res.status(200).json({ eligibility });
+        return res.status(200).json({ eligibility });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
 
 exports.deleteEligibility = async (req, res) => {
     try {
         const eligibility = await Eligibility.findByIdAndDelete(req.params.id);
-        res.status(200).json({ eligibility });
+        return res.status(200).json({ eligibility });
     } catch (error) {
-        res.status(500).json({ message: error.message });
+        return res.status(500).json({ message: error.message });
     }
 };
