@@ -3,6 +3,15 @@ const router = express.Router();
 
 const { isLoggedIn } = require('../middlewares');
 
+const {
+    authValidator: {
+        validateRegister,
+        validateLogin,
+        validateUpdateUser,
+    },
+    validate
+} = require('../validators');
+
 const { authController: {
     registerUser,
     loginUser,
@@ -10,9 +19,9 @@ const { authController: {
     updateUser
 } } = require('../controllers');
 
-router.post('/register', registerUser);
-router.post('/login', loginUser);
+router.post('/register', validateRegister, validate, registerUser);
+router.post('/login', validateLogin, validate, loginUser);
 router.get('/user', isLoggedIn, getUser);
-router.put('/user', isLoggedIn, updateUser);
+router.put('/user', isLoggedIn, validateUpdateUser, validate, updateUser);
 
 module.exports = router;
