@@ -12,6 +12,7 @@ const { connectToDatabase } = require('./db.js');
 const {
     authRoutes,
     scholarshipRoutes,
+    eligibilityRoutes,
     blogRoutes,
     contactRoutes,
     faqRoutes,
@@ -45,6 +46,7 @@ app.use(upload.fields([
 
 app.use('/auth', authRoutes);
 app.use('/scholarship', scholarshipRoutes);
+app.use('/eligibility', eligibilityRoutes);
 app.use('/blog', blogRoutes);
 app.use('/contact', contactRoutes);
 app.use('/faq', faqRoutes);
