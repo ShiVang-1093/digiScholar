@@ -1,0 +1,365 @@
+/* .main {
+    display: flex;
+    flex-direction: row;
+    height: 150%;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 25px solid rgb(153, 153, 199);
+    border-radius: 15px;
+}
+
+.flex1 {
+    flex: 1;
+    background-color: #0cb6f0;
+}
+  
+.text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 650;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 11px;
+}
+  
+.img{
+    width: 300px;
+    height: 400px;
+    margin-left: 55px;
+}
+  
+.flex2 {
+    flex: 2;
+    background-color: white;
+}
+  
+.heading {
+    text-align: left;
+    font-family: 'Inter';
+    font-weight: bolder;
+    margin-top: 61px;
+    margin-left: 41px;
+    font-size: 32px;
+}
+  
+input {
+    margin-bottom: 35px;
+}
+input[type="firstname"] {
+    margin-left: 15px;
+    width: 21%;
+    border-radius: 11px;
+    height: 35px;
+}
+input[type="lastname"] {
+    margin-left: 15px;
+    width: 21%;
+    border-radius: 11px;
+    height: 35px;
+}
+input[type="email"] {
+    font-family: 'Inter';
+    margin-left: 98px;
+    width: 68%;
+    border-radius: 11px;
+    height: 35px;
+}
+input[type="tel"] {
+    margin-left: 16px;
+    width: 68%;
+    border-radius: 11px;
+    height: 35px;
+}
+input[type="password"] {
+    margin-left: 40px;
+    width: 68%;
+    border-radius: 11px;
+    height: 35px;
+}
+  
+.form1 {
+    height: 390px;
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 30px;
+}
+  
+button {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 23px;
+    width: 85%;
+    height: 45px;
+    margin-left: 65px;
+    background: #0500ff;
+    color: white;
+    border-radius: 15px;
+}
+  
+button:hover {
+    cursor: pointer;
+    background-color: #8786ca;
+}
+  
+.create {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #000000;
+}
+   */
+
+   *{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2),
+     rgba(0, 0, 0, 0.2)), 
+     linear-gradient(0deg, rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)),
+       #0CB6F0;
+}
+.main {
+    border-radius:85px;
+    display: flex;
+    flex-direction: row;
+    /* height: 85vh; */
+    width: 90%;
+    /* margin-left: 8px;   
+    margin-right: 8px;
+    margin-top: 9px; */
+    /* border: 1px solid rgb(153, 153, 199); */
+    margin: 0 auto;
+    margin-top: 1.2rem;
+}
+
+.flex1 {
+    flex: 1;
+    background-color: #0cb6f0;
+    position: relative;
+    border-radius: 60px 0px 0px 60px;
+}
+  
+.text{
+    font-family: 'Inter';
+    position: absolute;
+    /* width: 328.24px; */
+    /* height: 132.6px; */
+    /* left: 61.6px; */
+    top: 50px;
+    left: 11%;
+    font-size: 2.2rem ;
+    font-weight: bold;
+    text-align: left;
+    /* background: #000000; */
+}
+  
+.img{    
+    width: 300px;
+    height: 325px;
+    margin-top: 50%;
+    margin-left: 11%;
+}
+  
+.flex2 {
+    flex: 2;
+    background-color: white;
+    border-radius: 0px 60px 60px 0px;
+    position: relative;
+}
+  
+.heading {
+    position: absolute;
+    width: 50%;
+    left: -8px;
+    top: -1%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+  .fname{
+    position: absolute;
+    left:4%;
+    top:23%; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+  }
+  .mname{
+    position: absolute;
+    left:35%;
+    top:23%; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+  }
+  .lname{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 66%;
+    top: 23%;
+  }
+  .mail{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;  
+    left: 4%;
+    top: 36%;
+    
+  }
+  .contact{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size:60%;
+    left: 4%;
+    top: 49%;
+  }
+  .institute{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size:60%;
+    left: 40%;
+    top: 49%;
+  }
+  .pwd{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 4%;
+    top: 62%;
+  }
+input {
+    margin-bottom: 35px;
+}
+input[type="firstname"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 4%;
+    top: 28%;
+}
+input[type="middlename"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 35%;
+    top: 28%;
+}
+input[type="lastname"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 66%;
+    top: 28%;
+}
+input[type="email"] {
+    position: absolute;
+    top: 41%;
+    left: -3.5%;   
+    width: 72%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="contactno"] {
+    position: absolute;
+    top: 54%;
+    left: 4%;
+    width: 30%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="text"] {
+    position: absolute;
+    top: 54%;
+    left: 40%;
+    width: 30%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="password"] {
+    position: absolute;
+    top: 67%;
+    left: 1.5%;
+    width: 72%;
+    border-radius: 11px;
+    height: 2rem;
+}
+  
+.form1 {
+    height: 390px;
+    margin-top: 76px;
+    /* margin-left: 146px; */
+    font-weight: bold;
+    font-size: 30px;
+    /* border: 1px solid red; */
+}
+  
+button {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 23px;
+    width: 85%;
+    height: 45px;
+    position: absolute;
+    top: 75%;
+    left: -5%;
+    background: #0500ff;
+    color: white;
+    border-radius: 7px;
+    transition: background-color 200ms ease-in-out;
+    transition:  transform  500ms ease-in;
+}
+  
+button:hover {
+    cursor: pointer;
+    background-color: #8786ca;
+    transform: scale(1.05);
+}
+  
+.create {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: gray;
+    position: absolute;
+    top: 86%;
+    left: 1%;
+}
+@media (max-width: 767px) {
+    .flex1 {
+      display: none;
+    }
+    .heading {
+        font-size: 1.5rem;
+      }
+  }
+  @media (min-width: 767px) {
+    .heading {
+      font-size: 2rem;
+    }
+  }
+  
+  
