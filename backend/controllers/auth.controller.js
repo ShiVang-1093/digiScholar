@@ -63,12 +63,12 @@ exports.registerUser = async (req, res) => {
             { expiresIn: 360000 },
             (err, token) => {
                 if (err) throw err;
-                res.json({ token });
+                return res.json({ token });
             });
 
     } catch (err) {
         console.error(err.message);
-        res.status(500).json({ msg: 'Server Error' });
+        return res.status(500).json({ msg: 'Server Error' });
     }
 
 };
@@ -106,7 +106,7 @@ exports.loginUser = async (req, res) => {
 
     } catch (err) {
         console.error(err.message);
-        res.status(500).json({ msg: 'Server Error' });
+        return res.status(500).json({ msg: 'Server Error' });
     }
 
 };

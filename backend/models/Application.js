@@ -4,11 +4,13 @@ const { Schema, models, model } = mongoose;
 const applicationSchema = new Schema({
     scholarship: {
         type: Schema.Types.ObjectId,
-        ref: 'Scholarship'
+        ref: 'Scholarship',
+        required: true
     },
     user: {
         type: Schema.Types.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     },
     status: {
         type: String,
@@ -16,5 +18,7 @@ const applicationSchema = new Schema({
         default: 'pending'
     }
 }, { timestamps: true });
+
+applicationSchema.index({ scholarship: 1, user: 1 }, { unique: true });
 
 module.exports = models.Application || model('Application', applicationSchema);

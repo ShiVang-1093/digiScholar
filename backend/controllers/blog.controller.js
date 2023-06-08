@@ -23,28 +23,28 @@ exports.createBlog = async (req, res) => {
             created_by: req.user.id
         });
 
-        res.status(201).json({ blog });
+        return res.status(201).json({ blog });
     } catch (error) {
         console.log(error);
-        res.status(500).json({ error });
+        return res.status(500).json({ error });
     }
 };
 
 exports.getBlogs = async (req, res) => {
     try {
         const blogs = await Blog.find();
-        res.status(200).json({ blogs });
+        return res.status(200).json({ blogs });
     } catch (error) {
-        res.status(500).json({ error });
+        return res.status(500).json({ error });
     }
 };
 
 exports.getBlog = async (req, res) => {
     try {
         const blog = await Blog.findById(req.params.id);
-        res.status(200).json({ blog });
+        return res.status(200).json({ blog });
     } catch (error) {
-        res.status(500).json({ error });
+        return res.status(500).json({ error });
     }
 };
 
@@ -107,9 +107,9 @@ exports.updateBlog = async (req, res) => {
             { new: true }
         );
 
-        res.status(200).json({ updatedBlog });
+        return res.status(200).json({ updatedBlog });
     } catch (error) {
-        res.status(500).json({ error });
+        return res.status(500).json({ error });
     }
 };
 
@@ -153,8 +153,8 @@ exports.deleteBlog = async (req, res) => {
             })
         );
 
-        res.status(200).json({ blog });
+        return res.status(200).json({ blog });
     } catch (error) {
-        res.status(500).json({ error });
+        return res.status(500).json({ error });
     }
 };
