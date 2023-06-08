@@ -1,0 +1,315 @@
+/* Testinomial.css */
+.tst-flex {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(237, 237, 237);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(15, 12, 12, 0.733);
+  justify-content: center;
+  margin: 2%;
+  position: relative;
+}
+
+.tstnml {
+  display: flex;
+  background-color: #d4ebff;
+  padding: 20px;
+  margin: 2%;
+}
+
+.sch-img {
+  flex: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sch-img img {
+  max-width: 100%;
+  height: 200px;
+  width: 200px;
+  border-radius: 10%;
+}
+
+.tst-content {
+  flex: 2;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tst-heading {
+  color: rgb(0, 0, 0);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.read-btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+  margin-top: 10px;
+  box-shadow: 0 2px 4px rgba(225, 60, 60, 0.733);
+
+}
+
+.read-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .tstnml {
+    flex-direction: column;
+  }
+  
+  .sch-img {
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  
+  .tst-content {
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* CSS for Scholarship Testimonial Page */
+/* Global Styles */
+
+
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+Container
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+Testimonial Section
+.tst-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tst-heading h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.tst-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+  position: relative;
+  background-color: rgb(242, 239, 239);
+  box-shadow: 0 2px 4px rgba(15, 12, 12, 0.733);
+}
+Testimonial Card
+.tstnml {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 20px;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #d4ebff;
+  border-radius: 10px;
+}
+
+h2 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.sch-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+
+p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.read-btn{
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(225, 60, 60, 0.733);
+}
+
+.read-btn:hover {
+  background-color: #2980b9;
+}
+
+Responsive Styles
+@media screen and (max-width: 768px) {
+  .tstnml {
+    padding: 10px;
+  }
+
+  .sch-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .read-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS for Scholarship Testimonial Page
+
+Global Styles
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+  
+  Container
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+  
+  Testimonial Section
+.tst-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+.tst-heading h3 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+  
+  Testimonial Card
+.tstnml {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 5%;
+    background-color: #bfe6eb;
+    border-radius: 10px;
+}
+  
+.sch-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+  
+h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+  
+.read {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.read:hover {
+    background-color: #2980b9;
+}
+  
+  Responsive Styles
+  @media screen and (max-width: 768px) {
+    .tstnml {
+      padding: 10px;
+    }
+  
+    .sch-img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    h2 {
+      font-size: 18px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    .read {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+}
+   */
