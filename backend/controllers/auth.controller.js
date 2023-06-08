@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
 exports.registerUser = async (req, res) => {
-
+    console.log("Body : ", req.body);
     const {
         fname,
         lname,
@@ -100,7 +100,7 @@ exports.loginUser = async (req, res) => {
             { expiresIn: 360000 },
             (err, token) => {
                 if (err) throw err;
-                res.json({ token });
+                res.status(200).json({ token });
             }
         );
 
