@@ -1,0 +1,89 @@
+.testi-card {
+    background-color: #DBE3FD;
+}
+
+.testi-btn {
+    background: #0CB6F0;
+    border-radius: 50px;
+    border: 2px solid #0CB6F0 !important;
+}
+
+.testi-btn:hover {
+    background: #0CB6F0;
+    border-radius: 50px;
+    border: 2px solid #0CB6F0 !important;
+}
+
+.testi-first-story {
+    border-radius: 75px 0px 60px 60px;
+}
+
+.testi-second-story {
+    border-radius: 0px 0px 60px 60px;
+}
+
+.testi-third-story {
+    border-radius: 0px 75px 60px 60px;
+}
+
+.see-more-link {
+    color: #0CB6F0;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* .faq-accr {
+    background-color: #F2F5FF;
+} */
+
+.accordion-button::after {
+    /* margin: 0; */
+    background-image: url('../public/Images/Plus_Icon.png');
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #F2F5FF;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url('../public/Images/Minus_Icon.png');
+    border-radius: 10px;
+}
+
+.accordion-button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.accordion-body {
+    background: #F2F5FF;
+}
+
+.accordion-button {
+    background: #F2F5FF;
+}
+
+.still-que {
+    background-color: #F2F5FF;
+}
+
+.faq-contact {
+    background: #202020;
+    border-radius: 25px;
+    padding: 1.7em;
+}
+
+.faq-contact>* {
+    color: #FFFFFF;
+}
+
+.faq-options {
+    background: #F2F5FF;
+    border-radius: 0px 25px 25px 0px;
+    padding: 1em;
+}
+
+.faq-options-li {
+    list-style-type: none;
+    margin: 10px;
+}
