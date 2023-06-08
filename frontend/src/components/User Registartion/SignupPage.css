@@ -1,0 +1,269 @@
+*{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+body{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2),
+     rgba(0, 0, 0, 0.2)), 
+     linear-gradient(0deg, rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)),
+       #0CB6F0;
+}
+.main {
+    border-radius:85px;
+    display: flex;
+    flex-direction: row;
+    /* height: 85vh; */
+    width: 90%;
+    /* margin-left: 8px;   
+    margin-right: 8px;
+    margin-top: 9px; */
+    /* border: 1px solid rgb(153, 153, 199); */
+    margin: 0 auto;
+    margin-top: 1.2rem;
+}
+
+.flex1 {
+    flex: 1;
+    background-color: #0cb6f0;
+    position: relative;
+    border-radius: 60px 0px 0px 60px;
+}
+  
+.text{
+    font-family: 'Inter';
+    position: absolute;
+    /* width: 328.24px; */
+    /* height: 132.6px; */
+    /* left: 61.6px; */
+    top: 50px;
+    left: 11%;
+    font-size: 2.2rem ;
+    font-weight: bold;
+    text-align: left;
+    /* background: #000000; */
+}
+  
+.img{    
+    width: 300px;
+    height: 350px;
+    margin-top: 50%;
+    margin-left: 11%;
+}
+  
+.flex2 {
+    flex: 2;
+    background-color: white;
+    border-radius: 0px 60px 60px 0px;
+    position: relative;
+}
+  
+.heading {
+    position: absolute;
+    width: 50%;
+    left: -8px;
+    top: -3%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 3rem;
+}
+.fname{
+    position: absolute;
+    left:4%;
+    top:18%; 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+}
+.mname{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 38%;
+    top: 18%;
+}
+.lname{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 70%;
+    top: 18%;
+}
+.institute{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;  
+    left: 4%;
+    top: 29%;   
+}
+.mail{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;  
+    left: 4%;
+    top: 40%;
+    
+}
+.contact{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    /* font-weight: 600; */
+    font-size:60%;
+    left: 4%;
+    top: 51%;
+}
+.pwd{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 4%;
+    top: 62%;
+  }
+.cpwd{
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size:60%;
+    left: 48%;
+    top: 62%;
+}
+input {
+    margin-bottom: 35px;
+}
+input[type="firstname"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 4%;
+    top: 22%;
+}
+
+input[type="middelname"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 38%;  /*change*/
+    top: 22%;   /*change*/
+}
+input[type="lastname"] {
+    width: 25%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 70%;
+    top: 22%;
+}
+input[type="institute"] {
+    position: absolute;
+    top: 33%;
+    left: 4%;   
+    width: 72%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="email"] {
+    position: absolute;
+    top: 44%;
+    left: -3.5%;   
+    width: 72%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="contactno"] {
+    position: absolute;
+    top: 55%;
+    left: 4%;
+    width: 72%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="password"] {
+    position: absolute;
+    top: 66%;
+    left: 1.5%;
+    width: 36%;
+    border-radius: 11px;
+    height: 2rem;
+}
+input[type="cpassword"] {
+    position: absolute;
+    top: 66%;
+    left: 48%;
+    width: 36%;
+    border-radius: 11px;
+    height: 2rem;
+}
+  
+.form1 {
+    height: 390px;
+    margin-top: 76px;
+    /* margin-left: 146px; */
+    font-weight: bold;
+    font-size: 30px;
+    /* border: 1px solid red; */
+}
+  
+button {
+    font-family: "Inter";
+    font-weight: bold;
+    font-size: 23px;
+    width: 85%;
+    height: 45px;
+    position: absolute;
+    top: 75%;
+    left: -5%;
+    background: #0500ff;
+    color: white;
+    border-radius: 7px;
+    transition: background-color 200ms ease-in-out;
+    transition:  transform  500ms ease-in;
+}
+  
+button:hover {
+    cursor: pointer;
+    background-color: #8786ca;
+    transform: scale(1.05);
+}
+  
+.create {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: gray;
+    position: absolute;
+    top: 86%;
+    left: 1%;
+}
+@media (max-width: 767px) {
+    .flex1 {
+      display: none;
+    }
+    .heading {
+        font-size: 1.5rem;
+      }
+}
+@media (min-width: 767px) {
+    .heading {
+      font-size: 2rem;
+    }
+}  

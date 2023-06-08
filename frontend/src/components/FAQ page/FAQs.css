@@ -1,0 +1,503 @@
+/* FAQs.css */
+
+/* Main container */
+.faq-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2%;
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  padding: 2%;
+  box-shadow: 0 2px 4px rgba(15, 12, 12, 0.733);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.heading h3 {
+  color: #333;
+  font-size: 24px;
+}
+
+.heading p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* FAQs.css */
+.faq {
+  position: relative; /* Add relative positioning */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  border-bottom: 3px solid rgb(78, 172, 255);
+  padding-top: 12px;
+  padding-bottom: 10px;
+  background-color: #d4ebff;
+}
+
+.faq button {
+  position: absolute; /* Position the button absolutely */
+  top: 50%; /* Move button vertically to the center */
+  right: 0; /* Align button to the right horizontally */
+  transform: translate(-50%, -50%); /* Adjust button position */
+  background-color: transparent;
+  border: 1px solid #3ea8fe;
+  color: #3ea8fe;  
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.faq .que {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 5px;
+  margin-left: 13px;
+}
+
+.faq .ans {
+  color: #666;
+  font-size: 16px;
+}
+
+.faq .ans p {
+  margin: 0;
+  margin-left: 13px;
+}
+
+
+
+/* .faq {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  border-bottom: 3px solid rgb(78, 172, 255);
+  padding-bottom: 10px;
+  background-color: #d4ebff;
+}
+
+.faq button {
+  align-self: flex-end;
+  background-color: transparent;
+  border: 1px solid #3ea8fe;
+  color: #3ea8fe;  
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.faq .que {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 2px;
+  margin-left: 10px;
+}
+
+.faq .ans {
+  color: #666;
+  font-size: 16px;
+}
+
+.faq .ans p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+Responsive
+@media (max-width: 600px) {
+  .faq {
+    align-items: center;
+    text-align: center;
+  }
+
+  .faq button {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .faq .que {
+    margin-bottom: 10px;
+  }
+} */
+
+
+
+/* still have question */
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f8ff; /* Light Sky Blue */
+  margin-top: 20px;
+}
+
+.contact-us div {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-us h3 {
+  color: #333;
+  font-size: 24px;
+}
+
+.contact-us p {
+  color: #666;
+  font-size: 16px;
+}
+
+/* Get in Touch button */
+.touch-btn {
+  padding: 10px 20px;
+  background-color: rgb(78, 172, 255); 
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+  align-self: center;
+}
+
+/* Media query for horizontal layout */
+@media (min-width: 600px) {
+  .contact-us {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact-us div {
+    margin-bottom: 0;
+  }
+
+  .touch-btn {
+    margin-left: auto;
+  }
+}
+
+
+
+
+/* still query section */
+/* .contact-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f8ff; 
+  margin-top: 20px;
+}
+
+.contact-us div {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-us h3 {
+  color: #333;
+  font-size: 24px;
+}
+
+.contact-us p {
+  color: #666;
+  font-size: 16px;
+}
+
+Get in Touch button
+.touch-btn {
+  padding: 10px 20px;
+  background-color: rgb(78, 172, 255); 
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5%;
+} */
+
+
+
+
+/* Contact us form */
+
+.flex1 {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #d4ebff;
+
+}
+
+.title{
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex-basis: 45%;
+}
+
+input[type="firstname"],
+input[type="lastname"],
+input[type="email"],
+input[type="contactno"]{
+  padding: 10px;
+  border: 1px solid rgb(78, 172, 255);
+  border-radius: 5px;
+  outline: none;
+}
+input[type="message"] {
+  padding: 5px;
+  border: 1px solid rgb(78, 172, 255);
+  border-radius: 5px;
+  outline: none;
+  height: 4rem;
+  width: 208%;
+}
+
+.sub-btn{
+  background-color: rgb(78, 172, 255);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 0%;
+  cursor: pointer;
+  font-weight: bold;
+  flex-basis: 60%;
+  margin-top: 10px;
+}
+
+/* Responsive */
+/* @media (max-width: 600px) {
+  .contact-form input {
+    width: 100%;
+  }
+} */
+
+
+
+
+
+
+/* Mobile Styles
+.faq-sec {
+    padding: 20px;
+    background-color: lightblue;
+  }
+  
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .heading h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .heading p {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .contact-us {
+    margin-top: 3%;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+  }
+  
+  .contact-us div {
+    margin-bottom: 10px;
+  }
+  
+  .contact-us h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .contact-us p {
+    font-size: 14px;
+    color: gray;
+  }
+  
+  .touch {
+    font-size: 14px;
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .main-heading{
+    cursor: pointer;
+  }
+  
+  Tablet Styles
+@media screen and (min-width: 768px) {
+    .faq-sec {
+      padding: 40px;
+    }
+  
+    .heading h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+  
+    .heading p {
+      font-size: 16px;
+    }
+  
+    .contact-us {
+      margin-top: 5%;
+      padding: 40px;
+    }
+  
+    .contact-us h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+  
+    .contact-us p {
+      font-size: 18px;
+    }
+  
+    .touch {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+    .main-heading{
+      cursor: pointer;
+    }
+}
+  
+  Desktop Styles
+@media screen and (min-width: 1024px) {
+    .faq-sec {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 60px;
+    }
+  
+    .heading h3 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+  
+    .heading p {
+      font-size: 20px;
+    }
+  
+    .contact-us {
+      margin-top: 8%;
+      padding: 60px;
+    }
+  
+    .contact-us h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+  
+    .contact-us p {
+      font-size: 24px;
+    }
+  
+    .touch {
+      font-size: 20px;
+      padding: 14px 28px;
+    }
+    .main-heading{
+      cursor: pointer;
+    }
+}
+
+
+.flex1 {
+  margin-top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: lightblue;
+
+}
+
+.title{
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex-basis: 45%;
+}
+
+input[type="firstname"],
+input[type="lastname"],
+input[type="email"],
+input[type="contactno"],
+input[type="message"] {
+  padding: 10px;
+  border: 1px solid blue;
+  border-radius: 5px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: blue;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  flex-basis: 100%;
+  margin-top: 10px;
+} */
