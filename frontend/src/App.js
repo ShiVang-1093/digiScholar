@@ -3,6 +3,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import LoginPage from './LoginPage';
 import SignupPage from './SignupPage';
 import HomePage from './HomePage';
+import Details from './components/Scholarship/Details';
+import Testinomial from './components/Testinomial/Testinomial';
+import Faq from './components/FAQ page/FAQs';
 // import Navbar from './Component/Navbar';
 
 const App = () => {
@@ -12,6 +15,10 @@ const App = () => {
         <Route exact path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="details" element={<Details />} />
+        <Route path="testinomial" element={<Testinomial />} />
+        <Route path="faq" element={<Faq />} />
+
       </Routes>
     </Router>
   );
