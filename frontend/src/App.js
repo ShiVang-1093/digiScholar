@@ -7,7 +7,8 @@ import HomePage from './HomePage';
 import Details from './components/Scholarship/Details';
 import Testinomial from './components/Testinomial/Testinomial';
 import Faq from './components/FAQ page/FAQs';
-// import Navbar from './Component/Navbar';
+import Blog from './components/Blog/Blog';
+import AllBlogs from './components/Blog/AllBlogs';
 
 const App = () => {
   return (
@@ -20,6 +21,8 @@ const App = () => {
         <Route path="/details" element={<Details />} />
         <Route path="/testimonial" element={<Testinomial />} />
         <Route path="/faq" element={<Faq />} />
+        <Route path="/blog/" element={<AllBlogs />} />
+        <Route path="/blog/:id" element={<Blog />} />
       </Routes>
     </Router>
   );
