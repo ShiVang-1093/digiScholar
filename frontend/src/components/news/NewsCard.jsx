@@ -1,6 +1,7 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-const NewsCard = ({ title, description, createdAt }) => {
+const NewsCard = ({ id, image, title, description, createdAt }) => {
   const getTimeDifference = (createdTime) => {
     const currentTime = new Date();
     const difference = currentTime - createdTime;
@@ -25,10 +26,10 @@ const NewsCard = ({ title, description, createdAt }) => {
         <div className='description'><p className='desc'>{description}</p></div>
         <p className='timestamp'>{formattedTime}</p>
         <div className='btn'>
-          <a className='btn-text' href='newsBlog2.html'>Read more</a>
+          <NavLink className='btn-text' to={`/news/${id}`}>Read more</NavLink>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 
