@@ -1,0 +1,64 @@
+.main-post{
+   background: #F2F5FF;
+   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.grid {
+  max-width: 80rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.card {
+  text-align: left;
+  font-family: 'Inter';
+  padding: 2em;
+  margin-bottom: 2%;
+  padding: 10px;
+  background: #FFFFFF;
+  border-radius: 12px;
+}
+
+h2 {
+  text-align: left;
+}
+
+.temp-image {
+  /* width: 230px; */
+  /* height: 156px; */
+  width: 256px;
+  height: 162px;
+  border-radius: 15px;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.head {
+  width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 49px;
+  text-align: center;
+  background: #F2F5FF;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.postAuthor {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 15px;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+  }
+
+.link {
+  text-decoration: none;
+}
