@@ -1,0 +1,73 @@
+.Singleblog {
+  background: #F2F5FF;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+
+.singlepost {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.Author-image {
+  flex: 1;
+  height: 380px;
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Author-image:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.content {
+  flex: 2;
+  text-align: left;
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  margin-left: 25px;
+}
+
+.Author-name {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana;
+  text-align: center;
+  font-size: 40px;
+}
+
+.ulitems {
+  cursor: pointer;
+  font-family: "Nunito Sans";
+  font-size: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.listitems:hover {
+  transform: scale(1.01);
+}
+
+.conc {
+  margin-left: 1.5%;
+}
+
+.conclusion-heading {
+  font-family: "Nutito Sans";
+  font-size: 30px;
+}
+
+.conclusion {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 25px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.conclusion:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
