@@ -1,0 +1,40 @@
+.logo {
+    height: 38px;
+    width: 230 px;
+  }
+  
+  @media (max-width: 576px) { /* Extra small devices */
+    .logo {
+      height: 30px;
+      width: 170px;
+    }
+  }
+  
+  @media (max-width: 768px) { /* Small devices */
+    .logo {
+      height: 35px;
+      width: 200px;
+    }
+  }
+.items{
+    margin-left: 12rem;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    color: #202020; 
+}   
+.active-here{
+    color: #0CB6F0;
+  
+}
+.active-div{
+    height: 5px;
+    width: 100%;
+    border-radius: 100px;
+    background-color: #0CB6F0;
+}
+.usericon{
+    margin-right: 2rem;
+}
