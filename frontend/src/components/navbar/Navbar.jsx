@@ -9,7 +9,7 @@ const Navbar = () => {
         <>
             <nav className="navbar navbar-expand-lg bg-body-tertiary ">
                 <div className="container-fluid shadow-lg mt-0">
-                    <NavLink to="index.html">
+                    <NavLink to="/">
                         <img
                             src={Logo}
                             className="logo"

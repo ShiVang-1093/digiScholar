@@ -12,10 +12,10 @@
 .flex1 {
   flex: 1;
   background-color: #0cb6f0;
-  
+
 }
 
-.text{
+.text {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 650;
@@ -24,11 +24,11 @@
   margin-top: 11px;
 }
 
-.img{
-    width: 300px;
-    height: 350px;
-    margin-top: 50%;
-    margin-left: 11%;
+.img {
+  width: 300px;
+  height: 350px;
+  margin-top: 50%;
+  margin-left: 11%;
 }
 
 .flex2 {
@@ -45,43 +45,43 @@
   font-size: 25px;
 }
 
- .mail2{
+.mail2 {
   position: absolute;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size:60%;  
+  font-size: 60%;
   left: 4%;
   top: 36.5%;
-  
+
 }
 
-.pwd2{
+.pwd2 {
   position: absolute;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 600;
-  font-size:60%;
+  font-size: 60%;
   left: 4%;
   top: 61%;
-} 
+}
 
 input[type="email"] {
-    position: absolute;
-    top: 41%;
-    margin-left: 7.5%;   
-    width: 72%;
-    border-radius: 11px;
-    height: 2rem;
+  position: absolute;
+  top: 41%;
+  margin-left: 7.5%;
+  width: 72%;
+  border-radius: 11px;
+  height: 2rem;
 }
 
 input[type="password"] {
-    position: absolute;
-    top: 67%;
-    margin-left: 2.5%;
-    width: 72%;
-    border-radius: 11px;
-    height: 2rem;
+  position: absolute;
+  top: 67%;
+  margin-left: 2.5%;
+  width: 72%;
+  border-radius: 11px;
+  height: 2rem;
 }
 
 .form1 {
@@ -120,5 +120,4 @@ button:hover {
   line-height: 24px;
   text-align: left;
   color: #000000;
-}
- */
+} */
