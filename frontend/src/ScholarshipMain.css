@@ -1,0 +1,105 @@
+/* * {
+  background: white;
+} */
+
+.ScholarshipMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f6f6f6;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+  width: 70%;
+  margin-left: 14.3%;
+  height: 505px;
+}
+
+.ScholarshipMain .main-image {
+  height: 425px;
+  border-radius: 50px;
+}
+
+input[type="search-bar"] {
+  margin-top: 1%;
+  margin-left: 65%;
+}
+
+.s-bar {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 26%;
+  left: 69%;
+  color: black;
+}
+
+.search-bar {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  padding-left: 35px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  border: 1px solid black;
+  border-radius: 28px;
+  margin-bottom: 5%;
+  width: 256px;
+}
+
+.search-bar:focus {
+  outline: none;
+  border-color: #337ab7;
+  box-shadow: 0 0 5px #337ab7;
+}
+
+.all-func{
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  margin-top: -2%;
+  margin-bottom: 5%;
+}
+
+.sort-container{
+  margin-left: 8%;
+}
+
+.availability-container{
+  margin-left: 1%;
+}
+
+.sort-container,
+.availability-container {
+  display: flex;
+  align-items: center;
+}
+
+.availability-container{
+  width: 11%;
+  margin-left: 17%;
+}
+
+label {
+  font-family: "Montserrat";
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.sort-select,
+.availability-select {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 8px 2px;
+  border: 1px solid black;
+  border-radius: 14px;
+}
+
+.availability-select{
+  padding-left: -2%;
+}
