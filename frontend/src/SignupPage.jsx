@@ -80,12 +80,51 @@ function SignupPage() {
     }
   };
 
+  // const handleLogin = (event) => {
+  //   event.preventDefault();
+  //   console.log("Email:", email);
+  //   console.log("Password:", password);
+
+  //   // Perform login logic here
+  //   setError("");
+
+  //   // Send login credentials to the server
+  //   fetch("/api/login", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ email, password }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data.error) {
+  //         setError(data.error);
+  //       } else {
+  //         // Store the JWT token in local storage or a secure cookie
+  //         localStorage.setItem("token", data.token);
+  //         // Redirect or perform other actions after successful login
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       setError("An error occurred. Please try again.");
+  //       console.error(error);
+  //     });
+  // };
+
+  const validatePassword = () => {
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()]).{8,}$/;
+    return passwordRegex.test(formData.password);
+  };
+
   return (
     <div className="main">
       <div className="flex1">
         <div className="text">Find a best Scholarship <br />for your education</div>
         <img className="img" src='./Images/Graduation 4.png' alt="Error" srcset="" />
-      </div>
+        <div className="text">Find a best <br /> Scholarship <br />for your education</div>
+        <img className="img" src='./Images/Graduation 4.png' alt="Error" srcset="" />
+      </div >
       <div className="flex2">
         <div className="heading">Create Account</div>
         <div className="form1">
@@ -181,7 +220,7 @@ function SignupPage() {
           </form>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 export default SignupPage;
