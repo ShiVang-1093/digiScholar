@@ -60,8 +60,6 @@ function SignupPage() {
         contactno: '',
         password: '',
     });
-    // You can send the email and password to your backend for authentication
-    // and handle the login logic on the server-side.
   };
 
   // const handleLogin = (event) => {
@@ -104,7 +102,7 @@ function SignupPage() {
   return (
     <div className="main">
       <div className="flex1">
-        <div className="text">Find a best Scholarship <br />for your education</div>
+        <div className="text">Find a best <br/> Scholarship <br />for your education</div>
       <img className="img" src='./Images/Graduation 4.png' alt="Error" srcset="" />
       </div>
       <div className="flex2">
