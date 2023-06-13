@@ -8,6 +8,11 @@ const newsSchema = new Schema({
         trim: true,
         minlength: 3
     },
+    image: {
+        type: String,
+        required: true,
+        trim: true,
+    },
     description: {
         type: String,
         required: true,
