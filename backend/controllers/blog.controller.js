@@ -8,16 +8,13 @@ const folder = process.env.CLOUDINARY_FOLDER;
 
 exports.createBlog = async (req, res) => {
     try {
-        console.log(req.files);
         const { image, other_images } = req.files;
-        const { title, content } = req.body;
 
         const imageResult = image[0].path;
         const otherImageResult = other_images.map((image) => image.path);
 
         const blog = await Blog.create({
-            title,
-            content,
+            ...req.body,
             image: imageResult,
             other_images: otherImageResult,
             created_by: req.user.id
@@ -51,7 +48,6 @@ exports.getBlog = async (req, res) => {
 exports.updateBlog = async (req, res) => {
     try {
         const { image, other_images } = req.files;
-        const { title, content } = req.body;
 
         const imageResult = image[0].path;
         const otherImageResult = other_images.map((image) => image.path);
@@ -99,8 +95,7 @@ exports.updateBlog = async (req, res) => {
         const updatedBlog = await Blog.findByIdAndUpdate(
             req.params.id,
             {
-                title,
-                content,
+                ...req.body,
                 image: imageResult,
                 other_images: otherImageResult
             },
@@ -153,7 +148,7 @@ exports.deleteBlog = async (req, res) => {
             })
         );
 
-        return res.status(200).json({ blog });
+        return res.status(200).json({ message: 'Blog deleted successfully' });
     } catch (error) {
         return res.status(500).json({ error });
     }

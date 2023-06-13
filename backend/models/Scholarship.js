@@ -30,6 +30,10 @@ const scholarshipSchema = new Schema({
         required: true,
         trim: true
     },
+    image: {
+        type: String,
+        required: true,
+    },
     amount: {
         type: Number,
         required: true
