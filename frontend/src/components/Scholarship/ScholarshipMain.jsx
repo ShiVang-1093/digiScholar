@@ -1,48 +1,59 @@
 import React, { useState, useEffect } from "react";
-import sch from "./Scholarship_API";
+// import sch from "./Scholarship_API";
 import Card from "./Card";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./ScholarshipMain.css";
 
 export default function ScholarshipMain() {
+
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("default");
   const [availability, setAvailability] = useState("all");
   const [sortedData, setSortedData] = useState([]);
-  
-  const filteredData = sch.filter((data) => {
-    if (
-      (data.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        data.content.toLowerCase().includes(searchTerm.toLowerCase())) &&
-      (availability === "all" || data.availability === availability)
-    ) {
-      return true;
-    }
-    return false;
-  });
+  const [data, setData] = useState();
+
+  // const filteredData = data.filter((data) => {
+  //   if (
+  //     (data.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //       data.content.toLowerCase().includes(searchTerm.toLowerCase())) &&
+  //     (availability === "all" || data.availability === availability)
+  //   ) {
+  //     return true;
+  //   }
+  //   return false;
+  // });
+
+  const getScholarShipData = async () => {
+    const response = await fetch("http://localhost:5000/scholarship");
+    const data = await response.json();
+    console.log("Scholarships : ", data);
+    setData(data.scholarships);
+    console.log("Data ; ", data);
+    setSortedData([...data.scholarships]);
+  }
 
   useEffect(() => {
-    setSortedData([...sch]);
+    getScholarShipData();
   }, []);
 
-  useEffect(() => {
-    if (sortBy === "AtoZ") {
-      const sortedDataByTitle = [...filteredData].sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
-      setSortedData(sortedDataByTitle);
-    } else if (sortBy === "ZtoA") {
-      const sortedDataByTitle = [...filteredData].sort((a, b) =>
-        b.title.localeCompare(a.title)
-      );
-      setSortedData(sortedDataByTitle);
-    } else {
-      setSortedData([...filteredData]);
-    }
-  }, [sortBy, filteredData]);
+  // useEffect(() => {
+  //   if (sortBy === "AtoZ") {
+  //     const sortedDataByTitle = [...filteredData].sort((a, b) =>
+  //       a.title.localeCompare(b.title)
+  //     );
+  //     setSortedData(sortedDataByTitle);
+  //   } else if (sortBy === "ZtoA") {
+  //     const sortedDataByTitle = [...filteredData].sort((a, b) =>
+  //       b.title.localeCompare(a.title)
+  //     );
+  //     setSortedData(sortedDataByTitle);
+  //   } else {
+  //     setSortedData([...filteredData]);
+  //   }
+  // }, [sortBy, filteredData]);
 
-  
+
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -103,7 +114,7 @@ export default function ScholarshipMain() {
           </select>
         </div>
         <div className="s-bar">
-          <FontAwesomeIcon icon={faSearch} className="search-icon" />
+          {/* <FontAwesomeIcon icon={faSearch} className="search-icon" /> */}
           <input
             type="search-bar"
             value={searchTerm}

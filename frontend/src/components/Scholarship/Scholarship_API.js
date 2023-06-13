@@ -1,5 +1,5 @@
-import img from './images/image - 1.png';
-import image from './images/test.jpg';
+import img from "../../images/image - 1.png";
+import image from '../../images/test.jpg';
 
 const test = [
   {
@@ -8,8 +8,8 @@ const test = [
       "10th,12h,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
-    availability:"closed",
+    image: img,
+    availability: "closed",
     id: "1",
   },
   {
@@ -18,8 +18,8 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:image,
-    availability:"available",
+    image: image,
+    availability: "available",
     id: "2",
   },
   {
@@ -28,7 +28,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "3",
   },
   {
@@ -37,7 +37,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "4",
   },
   {
@@ -46,7 +46,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "5",
   },
   {
@@ -55,7 +55,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "6",
   },
   {
@@ -64,7 +64,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "7",
   },
   {
@@ -73,7 +73,7 @@ const test = [
       "10th,12th,Diploma.\nINR 45,000.\n10 January 2022",
     content:
       "This Scholarship scheme is providing by KC Mahindra Educational Trust. Students, who passed their Madhyamik (10th) or Higher Secondary (12th) Board examination this year and took admission on Job Oriented Diploma Course can apply for this scholarship scheme. Minimum 60% marks required for this scholarship.",
-    image:img,
+    image: img,
     id: "8",
   },
 ];

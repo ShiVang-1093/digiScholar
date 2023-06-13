@@ -1,7 +1,4 @@
-@import '~typeface-nunito-sans';
-*{
-  background: white;
-}
+/* @import '~typeface-nunito-sans'; */
 
 .Card-main {
   display: flex;
@@ -21,7 +18,7 @@
   width: 530px;
   height: 280px;
   /* transition: opacity 0.3s ease; */
-  transition: box-shadow 0.3s ease; 
+  transition: box-shadow 0.3s ease;
   border-radius: 50px;
 }
 
@@ -30,7 +27,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-.title{
+.title {
   margin-top: 2%;
 }
 
@@ -66,11 +63,11 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.card-content p{
+.card-content p {
   background: #E3F3F9;
 }
 
-.point{
+.point {
   background: #E3F3F9;
 }
 
@@ -112,8 +109,7 @@
 }
 
 .visit-button:hover {
-   cursor: pointer;
-   background-color: #0881b3;
-   transform: scale(1.05); 
+  cursor: pointer;
+  background-color: #0881b3;
+  transform: scale(1.05);
 }
-
