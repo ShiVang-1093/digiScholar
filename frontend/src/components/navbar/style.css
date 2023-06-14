@@ -1,4 +1,5 @@
 .logo {
+<<<<<<< HEAD
     height: 38px;
     width: 230 px;
   }
@@ -28,13 +29,51 @@
 .active-here{
     color: #0CB6F0;
   
+=======
+  height: 38px;
+  width: 230 px;
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 }
-.active-div{
-    height: 5px;
-    width: 100%;
-    border-radius: 100px;
-    background-color: #0CB6F0;
+
+@media (max-width: 576px) {
+
+  /* Extra small devices */
+  .logo {
+    height: 30px;
+    width: 170px;
+  }
 }
-.usericon{
-    margin-right: 2rem;
+
+@media (max-width: 768px) {
+
+  /* Small devices */
+  .logo {
+    height: 35px;
+    width: 200px;
+  }
+}
+
+.items {
+  margin-left: 5rem;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  color: #202020;
+}
+
+.active-here {
+  color: #0CB6F0;
+
+}
+
+.active-div {
+  border-bottom: 4px solid #0CB6F0;
+  border-radius: 2px;
+  padding-bottom: 0.5rem;
+}
+
+.usericon {
+  margin-right: 2rem;
 }

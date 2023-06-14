@@ -13,17 +13,17 @@
 }
 
 /* Heading */
-.heading {
+.faq-heading {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.heading h3 {
+.faq-heading h3 {
   color: #333;
   font-size: 24px;
 }
 
-.heading p {
+.faq-heading p {
   color: #666;
   font-size: 16px;
 }
@@ -229,7 +229,7 @@ Get in Touch button
 
 
 /* Contact us form */
-
+/* 
 .flex1 {
   margin-top: 3%;
   display: flex;
@@ -295,7 +295,7 @@ input[type="message"] {
   font-weight: bold;
   flex-basis: 60%;
   margin-top: 10px;
-}
+} */
 
 /* Responsive */
 /* @media (max-width: 600px) {

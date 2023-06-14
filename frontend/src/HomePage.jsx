@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import {Link} from 'react-router-dom';
+=======
+import { NavLink } from 'react-router-dom';
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 import "./Homepage.css";
+import ContactUs from './components/FAQ page/ContactUs';
 
 const HomePage = () => {
     return (
@@ -71,6 +76,7 @@ const HomePage = () => {
 
             {/* Find best scholarship section  */}
             <div className="home-page-sch-title">
+<<<<<<< HEAD
                   <h1>Find Best Scholarships</h1>
             <div className="container d-flex justify-content-center align-items-center">
                 <div className="col-md-6">
@@ -99,6 +105,37 @@ const HomePage = () => {
                 </div>
                 <div className="thirdimage col-md-6">
                     <img src="./Images/Find_Best_3.png" className="find-best-3" alt="Error" />
+=======
+                <h1>Find Best Scholarships</h1>
+                <div className="container d-flex justify-content-center align-items-center">
+                    <div className="col-md-6">
+                        <img src="./Images/Find_Best_1.png" className="find-best-1" alt="Error" />
+                        <img src="./Images/Find_Best_2.png" className="find-best-2" alt="Error" />
+                    </div>
+                    <div className="col-md-6">
+                        <div className="sch-homepage">
+                            <h1>ABC Corporation Scholarship</h1>
+                            <p>
+                                The ABC Corporation Scholarship is open to undergraduate students pursuing degrees in business or technology fields. The scholarship aims to support students with exceptional academic achievements and leadership potential. Recipients will receive a financial award of $5,000 to assist with tuition fees and educational expenses.
+                            </p>
+                            <a href="#" className="btnlearnmore btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div className="container d-flex justify-content-end align-items-center">
+                    <div className="col-md-6">
+                        <div className="sch-homepage">
+                            <h1>International Peace Scholarship</h1>
+                            <p>
+                                The International Peace Scholarship is a prestigious award offered to women from countries outside the United States and Canada who are pursuing graduate degrees in any field of study. The scholarship is administered by the P.E.O. Sisterhood, a philanthropic organization dedicated to empowering women through education. Recipients are chosen based on their academic achievements, financial need, and dedication to promoting peace and understanding. The scholarship provides funding of up to $12,500 per academic year.
+                            </p>
+                            <a href="#" className="btnlearnmore btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                    <div className="thirdimage col-md-6">
+                        <img src="./Images/Find_Best_3.png" className="find-best-3" alt="Error" />
+                    </div>
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
                 </div>
             </div>
             </div>
@@ -123,7 +160,11 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="morenews ms-auto me-5 d-flex justify-content-end">
+<<<<<<< HEAD
                     <Link to="/News" className="see-more-link-news">Read More News</Link>
+=======
+                    <NavLink to="/News" className="see-more-link-news">Read More News</NavLink>
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
                 </div>
             </div>
 
@@ -154,7 +195,11 @@ const HomePage = () => {
                     </div>
                 </div>
                 <div className="moreblog ms-auto me-5 d-flex justify-content-end">
+<<<<<<< HEAD
                     <Link to="/Blog" className="see-more-link-blog">See More Blogs</Link>
+=======
+                    <NavLink to="/Blog" className="see-more-link-blog">See More Blogs</NavLink>
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
                 </div>
             </div>
 
@@ -166,7 +211,7 @@ const HomePage = () => {
                     <p>Everything you need to know about the Scholarship </p>
                 </center>
                 <div className="d-flex justify-content-center align-items-center faq-accr">
-                    <div className="col-md-7">
+                    <div className="col-md-11">
                         <div className="accordion" id="accordionExample">
                             <div className="accordion-item m-0">
                                 <h2 className="accordion-header">
@@ -209,14 +254,28 @@ const HomePage = () => {
 
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div id='still-que' className="col-md-4 d-flex flex-1 mx-4 jusitfy-content-center align-items-center flex-column still-que flex-fill align-self-stretch">
+=======
+                    {/* <div id='still-que' className="col-md-4 d-flex flex-1 mx-4 jusitfy-content-center align-items-center flex-column still-que flex-fill align-self-stretch">
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
                         <h2>Still have questions</h2>
                         <p>Can't find answer you're looking for?</p>
                         <div className="btn btn-primary testi-btn">Get in touch</div>
-                    </div>
+                    </div>*/}
                 </div>
+<<<<<<< HEAD
                     <div id='more-questions' href="#" className="btn btn-primary testi-btn">More questions</div>
 
+=======
+                <NavLink id='more-questions' to="/faq" className="btn btn-primary testi-btn">More questions</NavLink>
+
+            </div>
+
+            {/* contact us */}
+            <div>
+                <ContactUs />
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
             </div>
 
             {/* Footer */}
@@ -243,16 +302,32 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
                 <div className="opt col-md-8 faq-options">
+=======
+                <div className="opt col-md-8 faq-options ms-3">
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
                     <h2>Options</h2>
                     <div className="row">
                         <div className="col-3">
-                            <li className="faq-options-li">Home</li>
-                            <li className="faq-options-li">Scholarship</li>
-                            <li className="faq-options-li">Blogs</li>
-                            <li className="faq-options-li">News</li>
-                            <li className="faq-options-li">Testimonials</li>
-                            <li className="faq-options-li">FAQs</li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/" className="faq-options text-decoration-none">Home</NavLink>
+                            </li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/scholarship" className="faq-options text-decoration-none">Scholarship</NavLink>
+                            </li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/blogs" className="faq-options text-decoration-none">Blogs</NavLink>
+                            </li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/news" className="faq-options text-decoration-none text-decoration-none">News</NavLink>
+                            </li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/testimonials" className="faq-options text-decoration-none">Testimonials</NavLink>
+                            </li>
+                            <li className='faq-options-li'>
+                                <NavLink to="/faqs" className="faq-options text-decoration-none">FAQs</NavLink>
+                            </li>
                         </div>
                         <div className="digiimg col-9 d-flex justify-content-center align-items-center">
                             <img src="./Images/digiScholar.png" alt="" />
@@ -260,7 +335,10 @@ const HomePage = () => {
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
         </>
     )
 }
