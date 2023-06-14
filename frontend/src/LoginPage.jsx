@@ -52,18 +52,16 @@ function LoginPage() {
   };
 
   return (
-    <div className="main">
-      <div className="flex1">
-        <div className="text">First step towards your dream Scholarship</div>
-        <img className="img" src="./Images/Graduation 2.png" alt="Error" srcset="" />
-      </div>
-      <div className="flex2">
-        <div className="heading">Login To Your Account</div>
-        <div className="form1">
+ <div className="login-wrapper">
+     <div className="login-container">
+      <div className="login-flex1">
+        <div className="login-heading">Login To Your Account</div>
+        <div className="login-form1">
           <form>
-            <label>
-              <div className="mail2">Email</div>
+            <label >
+              <div className="login-mail">Email:</div>
               <input
+                id="dcs3"
                 type="email"
                 name="email"
                 onChange={handleChange}
@@ -71,26 +69,30 @@ function LoginPage() {
                 value={formData.email}
               />
             </label >
-            <br />
-            <label>
-              <div className="pwd2">Password</div>
+            { <label>
+              <div className="login-password">Password:</div>
               <input
+                id="dcs4"
                 type="password"
                 name="password"
                 onChange={handleChange}
-                required placeholder="8 Charactor required"
+                required placeholder="8 character required"
                 value={formData.password}
               />
-            </label>
+            </label> }
             <br />
-            <button type="submit" name="Login" onClick={handleLogin}>Login</button>
+            { <button type="submit" name="Login" onClick={handleLogin} id="dsc1">Login</button> }
           </form>
-          <div className="create">Don't have an account ? <Link to="/signup">Create Account</Link></div>
+          { <div id="dcs7">Don't have an account ? <Link to="/signup">Create Account</Link></div>  }
         </div>
+      </div>  
+      <div className="login-flex2">
+        <div className="login-heading2">First step towards your dream Scholarship</div>
+        <img id="dcs2" src="./Images/Graduation 2.svg" alt="Error" srcset="" />
       </div>
     </div>
+ </div>
   );
 }
-
 
 export default LoginPage;
