@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./FAQs.css";
-// import "./ContactUs.css";
+// import "./FAQs.css";
+import "./ContactUs.css";
 // import { Link } from "react-router-dom";
 
 function ContactUs() {
@@ -42,7 +42,7 @@ function ContactUs() {
 
   return (
       <div className="flex1">
-        <div className="title">Get in Touch</div>
+        <div className="contactus-title">If you have any query you can reach out to us</div>
         <div className="contact-form">
         <form>
         <label>

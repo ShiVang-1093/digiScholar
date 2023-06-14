@@ -34,13 +34,29 @@ const SchDetails = ({ data }) => {
         </div>
       </div>
       <div className="ele-res">
-        <button className='ele' onClick={showEligibilityContent}>Eligibility</button>
-        <button className='res' onClick={showResourcesContent}>Resources</button>
+        <button
+          className={`ele ${showEligibility ? 'active' : ''}`}
+          onClick={showEligibilityContent}
+        >
+          Eligibility
+        </button>
+        <button
+          className={`res ${showResources ? 'active' : ''}`}
+          onClick={showResourcesContent}
+        >
+          Resources
+        </button>
       </div>
       {showEligibility && (
         <div className="eligibility-container">
           <h2>Eligibility Criteria</h2>
-          <p>{data.eligibility}</p>
+          <ul className='criterias'>
+            {data.eligibility.map((eligibility, index) => (
+              <li key={index}>
+                <>{eligibility}</>
+              </li>
+            ))}
+          </ul>
           <button className='apply-now'>Apply Now</button>
         </div>
       )}
