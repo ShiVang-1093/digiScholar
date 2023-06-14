@@ -118,20 +118,20 @@ function SignupPage() {
   };
 
   return (
-    <div className="main">
-      <div className="flex1">
-        <div className="text">Find a best Scholarship <br />for your education</div>
-        <img className="img" src='./Images/Graduation 4.png' alt="Error" srcset="" />
-        <div className="text">Find a best <br /> Scholarship <br />for your education</div>
-        <img className="img" src='./Images/Graduation 4.png' alt="Error" srcset="" />
+    <div className="signup-wrapper">
+      <div className="signup-container">
+      <div className="signup-flex1">
+        <div className="signup-heading">Find a best Scholarship <br />for your education</div>
+        <img className="signup-illustrator" src='./Images/Graduation 4.svg' alt="Error" srcset="" />  
       </div >
-      <div className="flex2">
-        <div className="heading">Create Account</div>
+      <div className="signup-flex2">
+        <div className="signup-heading2">Create Account</div>
         <div className="form1">
           <form>
             <label>
-              <div className="fname">First name</div>
+              <div className="signup-fname">First name</div>
               <input
+                id="sp1"
                 type="firstname"
                 name="firstname"
                 onChange={handleChange}
@@ -139,19 +139,21 @@ function SignupPage() {
                 value={formData.firstname}
               />
             </label>
-            <label>
-              <div className="mname">Middle name</div>
+            {/* <label>
+              <div className="signup-mname">Middle name</div>
               <input
+                id="sp2"
                 type="middlename"
                 name="middlename"
                 onChange={handleChange}
                 required placeholder="Enter your Middle name"
                 value={formData.middlename}
               />
-            </label>
+            </label> */}
             <label>
-              <div className="lname">Last name</div>
+              <div className="signup-lname">Last name</div>
               <input
+                id="sp3"
                 type="lastname"
                 name="lastname"
                 onChange={handleChange}
@@ -161,8 +163,9 @@ function SignupPage() {
             </label>
             <br />
             <label>
-              <div className="mail">Email</div>
+              <div className="signup-mail">Email</div>
               <input
+                id="sp4"
                 type="email"
                 name="email"
                 onChange={handleChange}
@@ -172,8 +175,9 @@ function SignupPage() {
             </label>
             <br />
             <label>
-              <div className="contact">Contact No</div>
+              <div className="signup-contact">Contact No</div>
               <input
+                id="sp5" 
                 type="contactno"
                 name="contactno"
                 onChange={handleChange}
@@ -181,21 +185,23 @@ function SignupPage() {
                 value={formData.contactno}
               />
             </label>
-            <br />
-            <label>
-              <div className="institute">Institute</div>
+ 
+            {/* <label>
+              <div className="signup-institute">Institute</div>
               <input
+                id="sp6"
                 type="text"
                 name="institute"
                 onChange={handleChange}
                 required placeholder="Charusat University"
                 value={formData.institute}
               />
-            </label>
-            <br />
+            </label> */}
+   
             <label>
-              <div className="pwd">Password</div>
+              <div className="signup-pwd">Password</div>
               <input
+                id="sp7"
                 type="password"
                 name="password"
                 onChange={handleChange}
@@ -203,9 +209,10 @@ function SignupPage() {
                 value={formData.password}
               />
             </label>
-            <label>
-              <div className="cpwd">Confirm Password</div>
+            {/* <label>
+              <div className="signup-cpwd">Confirm Password</div>
               <input
+                id="sp8"
                 type="cpassword"
                 name="cpassword"
                 onChange={handleChange}
@@ -213,16 +220,15 @@ function SignupPage() {
                 placeholder="Confirm password"
                 value={formData.cpassword}
               />
-            </label>
+            </label> */}
             <br />
-            <button type="submit" name="Create Account" onClick={handleLogin}>Create Account</button>
-            <div className="create">Already have an account ? <Link to="/login">Login</Link></div>
+            <button type="submit" name="Create Account" id="sp9" onClick={handleLogin}>Create Account</button>
+            <div className="signup-login-account">Already have an account ? <Link to="/login">Login</Link></div>
           </form>
         </div>
       </div>
     </div >
+    </div>
   );
 }
 export default SignupPage;
-
-

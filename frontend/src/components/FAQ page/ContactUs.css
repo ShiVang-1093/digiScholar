@@ -1,6 +1,6 @@
 
 /* Contact us form */
-.flex1 {
+.faq-flex1 {
     margin-top: 3%;
     display: flex;
     flex-direction: column;
@@ -23,24 +23,22 @@
     border-radius: 10px;
 }
   
-form {
+.doubt-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 }
   
-label {
+.faq-lable {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     flex-basis: 45%;
 }
   
-input[type="firstname"],
-input[type="lastname"],
-input[type="email"],
-input[type="contactno"] {
+.faq-fields
+{
     padding: 10px;
     border: 1px solid rgb(78, 172, 255);
     border-radius: 5px;
@@ -48,7 +46,7 @@ input[type="contactno"] {
     width: 100%; /* Adjust input field width to fit the container */
 }
   
-input[type="message"] {
+.faq-massage {
     padding: 5px;
     border: 1px solid rgb(78, 172, 255);
     border-radius: 5px;

@@ -41,13 +41,14 @@ function ContactUs() {
   };
 
   return (
-      <div className="flex1">
+      <div className="faq-flex1">
         <div className="contactus-title">If you have any query you can reach out to us</div>
         <div className="contact-form">
-        <form>
-        <label>
+        <form className="doubt-form">
+        <label className="faq-lable">
             <div className="fname">First name:</div>            
-            <input
+            <input 
+              className="faq-fields"
               type="firstname"
               name="firstname"
               onChange={handleChange} 
@@ -56,9 +57,10 @@ function ContactUs() {
               required
             />
           </label>
-          <label>
+          <label className="faq-lable">
             <div className="lname">Last name:</div>            
             <input
+              className="faq-fields"
               type="lastname"
               name="lastname"
               onChange={handleChange} 
@@ -69,9 +71,10 @@ function ContactUs() {
           </label>
           <br/>
           <br/>
-          <label>
+          <label className="faq-lable">
             <div className="mail">Email:</div>
             <input
+              className="faq-fields"
               type="email"
               name="email"
               onChange={handleChange} 
@@ -80,9 +83,10 @@ function ContactUs() {
               value={formData.email}
             />
           </label>
-          <label>
+          <label className="faq-lable">
             <div className="contact">Contact Number:</div>
             <input
+              className="faq-fields"
               type="contactno"
               name="contactno"
               onChange={handleChange} 
@@ -92,14 +96,14 @@ function ContactUs() {
             />
           </label>
           <br/>
-          <label>
+          <label className="faq-lable">
           <div className="message">Message:</div>
             <input
+            className="faq-massage"
               type="message"
               name="message"
               onChange={handleChange}
               required 
-            //   placeholder
               value={formData.password}
             />
           </label>
@@ -107,7 +111,6 @@ function ContactUs() {
           <br/>
           <button className="sub-btn" onClick={handleLogin}>Submit</button>
         </form>
-        {/* <Link className="create" to ='/login'>Already have an account ? Login</Link> */}
         </div>
       </div>
   );

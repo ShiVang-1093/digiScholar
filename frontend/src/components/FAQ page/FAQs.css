@@ -13,17 +13,17 @@
 }
 
 /* Heading */
-.heading {
+.faq-heading {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.heading h3 {
+.faq-heading h3 {
   color: #333;
   font-size: 24px;
 }
 
-.heading p {
+.faq-heading p {
   color: #666;
   font-size: 16px;
 }

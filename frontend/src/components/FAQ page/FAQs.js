@@ -32,7 +32,7 @@ const Faq = () => {
     return (
       <>
         <section className="faq-sec">
-          <div className="heading">
+          <div className="faq-heading">
             <h3>Frequently asked question</h3>
             <p>Everything you need to know about scholarships</p>
           </div>
