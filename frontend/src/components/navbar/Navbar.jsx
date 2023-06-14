@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import './style.css';
 import Logo from "./DigiScholar.svg";
 import usericon from "./usericon.svg";
 
