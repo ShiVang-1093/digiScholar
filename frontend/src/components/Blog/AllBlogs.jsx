@@ -38,7 +38,7 @@ function AllBlogs() {
         <div className="grid">
           {data.map((post) => {
             return (
-              <div className="card" key={post._id}>
+              <div className="card-blog" key={post._id}>
                 <img className="temp-image" src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1064.jpg" alt={"Error"} />
                 <p>"{post.content}"</p>
                 <Link to={`/blog/${post._id}`} className="link">

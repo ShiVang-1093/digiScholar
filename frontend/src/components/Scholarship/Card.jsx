@@ -1,6 +1,6 @@
 import React from "react";
 import "./Card.css";
-// import "typeface-montserrat";
+import "typeface-montserrat";
 
 export default function Card(prop) {
   console.log("props ; ", prop);

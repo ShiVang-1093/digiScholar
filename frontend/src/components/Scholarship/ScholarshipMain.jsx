@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import sch from "./Scholarship_API";
 import Card from "./Card";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./ScholarshipMain.css";
 
 export default function ScholarshipMain() {

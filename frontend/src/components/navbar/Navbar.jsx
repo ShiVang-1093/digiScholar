@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from "./DigiScholar.svg";
 import usericon from "./usericon.svg";
-
+import './style.css';
 
 const Navbar = () => {
     return (
