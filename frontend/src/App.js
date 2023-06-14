@@ -12,6 +12,7 @@ import Blog from './components/Blog/Blog';
 import News from "./components/news/News";
 import AllNews from './components/news/AllNews';
 import AllBlogs from './components/Blog/AllBlogs';
+import Logout from './Logout';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/details" element={<Details />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/testimonial" element={<Testinomial />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog/" element={<AllBlogs />} />

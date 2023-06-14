@@ -1,10 +1,8 @@
-
-
-.signup-wrapper{
+.signup-wrapper {
     background-color: #E3F3F9;
     width: 100vw;
     height: 100vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .signup-container {
@@ -15,7 +13,7 @@
     margin: 0 auto;
     margin-top: 2%;
     border-radius: 85px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .signup-flex1 {
@@ -30,14 +28,14 @@
     font-weight: 600;
     font-size: 40px;
     line-height: 48px;
-    overflow: hidden;
+    /* overflow: hidden; */
     margin-top: 2rem;
     margin: 20px 30px;
 }
 
 .signup-illustrator {
     width: 300px;
-    height: 350px; 
+    height: 350px;
     margin-right: 40%;
     margin-left: 11%;
     /* margin-top: 2rem; */
@@ -51,7 +49,7 @@
 }
 
 .signup-heading2 {
-     font-family: 'Inter';
+    font-family: 'Inter';
     font-weight: 600;
     margin-top: 2rem;
     margin-left: 6%;
@@ -68,7 +66,8 @@
     font-weight: 600;
     font-size: 90%;
 }
-#sp1{
+
+#sp1 {
     width: 35%;
     border-radius: 11px;
     height: 2rem;
@@ -76,6 +75,7 @@
     left: 4%;
     top: 24%;
 }
+
 /* .signup-mname {
     position: absolute;
     left: 35%;
@@ -95,7 +95,7 @@
     top: 28%;
     visibility: hidden;
 } */
-    
+
 .signup-lname {
     position: absolute;
     left: 45%;
@@ -105,6 +105,7 @@
     font-weight: 600;
     font-size: 90%;
 }
+
 #sp3 {
     width: 35%;
     border-radius: 11px;
@@ -113,6 +114,7 @@
     left: 44%;
     top: 24%;
 }
+
 .signup-mail {
     position: absolute;
     left: 5%;
@@ -122,6 +124,7 @@
     font-weight: 600;
     font-size: 90%;
 }
+
 #sp4 {
     width: 75%;
     border-radius: 11px;
@@ -149,6 +152,7 @@
     left: 4%;
     top: 51%;
 }
+
 /* .signup-institute {
     position: absolute;
     font-family: 'Inter';
@@ -167,7 +171,8 @@
     font-weight: 600;
     font-size: 90%;
 }
-#sp7{
+
+#sp7 {
     width: 75%;
     border-radius: 11px;
     height: 2rem;
@@ -198,28 +203,29 @@
     font-size: 30px;
 } */
 
-#sp9{
+#sp9 {
     font-family: 'Inter';
-  font-weight: bold;
-  font-size: 23px;
-  width: 75%;
-  height: 7%;
-  background: #0cb6f0;
-  color: white;
-  border-radius: 15px;
-  position: absolute;
-  bottom: 18%;
-  left: 4%;
-  overflow: hidden;
-  
+    font-weight: bold;
+    font-size: 23px;
+    width: 75%;
+    height: 7%;
+    background: #0cb6f0;
+    color: white;
+    border-radius: 15px;
+    position: absolute;
+    bottom: 18%;
+    left: 4%;
+    overflow: hidden;
+
 }
-#sp9:hover{
+
+#sp9:hover {
     cursor: pointer;
     background-color: #8786ca;
     transition-duration: 400ms;
 }
 
-.signup-login-account{
+.signup-login-account {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;

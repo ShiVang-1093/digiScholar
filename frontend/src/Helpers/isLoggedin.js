@@ -1,5 +1,5 @@
 const isLoggedin = () => {
-    if (localStorage.getItem('token')) {
+    if (localStorage.getItem('jwt')) {
         return true;
     }
     else {
