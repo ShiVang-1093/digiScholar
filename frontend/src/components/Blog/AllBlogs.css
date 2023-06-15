@@ -1,0 +1,102 @@
+.main-post {
+    margin-top: 3%;
+    background: #f2f5ff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.grid {
+    max-width: 80rem;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.card {
+    text-align: left;
+    font-family: "Inter";
+    margin-bottom: 2%;
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 12px;
+}
+
+.temp-image {
+    /* width: 230px; */
+    /* height: 156px; */
+    width: 275px;
+    height: 162px;
+    border-radius: 15px;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.card > p {
+    margin-top: 15%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.head {
+    width: 100%;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 25px;
+    border-radius: 15px;
+    line-height: 49px;
+    text-align: center;
+    background: #f2f5ff;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.head > h1 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 49px;
+    text-align: center;
+    color: #202020;
+    padding-top: 5px;
+}
+
+.head > h5 {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #191919;
+}
+.postAuthor {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    margin-top: 15px;
+    display: block;
+    color: grey;
+    text-align: left;
+    cursor: pointer;
+}
+
+.link {
+    text-decoration: none;
+}
+

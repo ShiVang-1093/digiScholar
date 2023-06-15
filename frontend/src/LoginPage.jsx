@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import {Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import "./LoginPage.css";
+import isLoggedin from "./Helpers/isLoggedin";
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -17,73 +19,88 @@ function LoginPage() {
     }));
   };
 
-  const handleLogin = (event) => {
+  useEffect(() => {
+    if (isLoggedin()) {
+      window.location.href = "/";
+    }
+  });
+  const handleLogin = async (event) => {
     event.preventDefault();
-    if (formData.email === '' || formData.password === '') {
-      alert('Please fill in both email and password fields.');
-      return;
-    }
 
-    if (!validatePassword()) {
-      alert(
-        'Invalid password. Please make sure it has at least 8 characters, one uppercase letter, one lowercase letter, one digit, and one symbol.'
-      );
-      return;
-    }
-    
     console.log('Email:', formData.email);
     console.log('Password:', formData.password);
     setFormData({
       email: '',
       password: '',
     });
-  };
 
-  const validatePassword = () => {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()]).{8,}$/;
-    return passwordRegex.test(formData.password);
+    const res = await fetch("http://localhost:5000/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + localStorage.getItem("jwt")
+      },
+      body: JSON.stringify({
+        email: formData.email,
+        password: formData.password
+      })
+    });
+    const resJson = await res.json();
+    console.log(resJson);
+    if (res.status == 400 || res.status == 500 || !res) {
+      window.alert("Invalid Credentials");
+      console.log("Invalid Credentials");
+    }
+    else if (res.status == 200) {
+      window.alert("Login Successful");
+      localStorage.setItem("jwt", resJson.token);
+      console.log("Login Successful");
+      window.location.href = "/";
+    }
   };
 
   return (
-    <div className="main">
-      <div className="flex1">
-        <div className="text">First step towards your dream Scholarship</div>
-      <img className="img" src="./Images/Graduation 2.png" alt="Error" srcset="" />
-      </div>
-      <div className="flex2">
-        <div className="heading">Login To Your Account</div>
-        <div className="form1">
-        <form>
-          <label>
-            <div className="mail2">Email</div>
-            <input
-              type="email"
-              name="email"
-              onChange={handleChange} 
-              required placeholder="abc@gmail.com"
-              value={formData.email}
-            />
-          </label >
-          <br />
-          <label>
-          <div className="pwd2">Password</div>
-            <input
-              type="password"
-              name="password"
-              onChange={handleChange}
-              required placeholder="8 Charactor required"
-              value={formData.password}
-            />
-          </label>
-          <br />
-          <button type="submit" name="Login"onClick={handleLogin}>Login</button>
-        </form>
-        <div className="create">Don't have an account ? <Link to="/signup">Create Account</Link></div>
+    <div className="login-wrapper">
+      <div className="login-container">
+        <div className="login-flex1">
+          <div className="login-heading">Login To Your Account</div>
+          <div className="login-form1">
+            <form>
+              <label >
+                <div className="login-mail">Email:</div>
+                <input
+                  id="dcs3"
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  required placeholder="abc@gmail.com"
+                  value={formData.email}
+                />
+              </label >
+              {<label>
+                <div className="login-password">Password:</div>
+                <input
+                  id="dcs4"
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  required placeholder="8 character required"
+                  value={formData.password}
+                />
+              </label>}
+              <br />
+              {<button type="submit" name="Login" onClick={handleLogin} id="dsc1">Login</button>}
+            </form>
+            {<div id="dcs7">Don't have an account ? <Link to="/signup">Create Account</Link></div>}
+          </div>
+        </div>
+        <div className="login-flex2">
+          <div className="login-heading2">First step towards your dream Scholarship</div>
+          <img id="dcs2" src="./Images/Graduation 2.svg" alt="Error" srcset="" />
         </div>
       </div>
     </div>
   );
 }
-
 
 export default LoginPage;

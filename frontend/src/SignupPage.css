@@ -1,208 +1,281 @@
-   /* *{
-    overflow-x: hidden;
-    overflow-y: hidden;
-} */
-body{
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2),
-     rgba(0, 0, 0, 0.2)), 
-     linear-gradient(0deg, rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)),
-       #0CB6F0;
-}
-.main {
-    border-radius:85px;
-    display: flex;
-    flex-direction: row;
-    /* height: 85vh; */
-    width: 90%;
-    /* margin-left: 8px;   
-    margin-right: 8px;
-    margin-top: 9px; */
-    /* border: 1px solid rgb(153, 153, 199); */
-    margin: 0 auto;
-    margin-top: 1.2rem;
+.signup-wrapper {
+    background-color: #E3F3F9;
+    width: 100vw;
+    height: 100vh;
+    /* overflow-y: hidden; */
 }
 
-.flex1 {
-    flex: 1;
+.signup-container {
+    display: flex;
+    flex-direction: row;
+    height: 82vh;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 85px;
+    /* overflow: hidden; */
+}
+
+.signup-flex1 {
+    /* flex: 1; */
+    width: 30%;
     background-color: #0cb6f0;
     position: relative;
     border-radius: 60px 0px 0px 60px;
 }
-  
-.text{
-    font-family: 'Inter';
-    position: absolute;
-    /* width: 328.24px; */
-    /* height: 132.6px; */
-    /* left: 61.6px; */
-    top: 50px;
-    left: 11%;
-    font-size: 2.2rem ;
-    font-weight: bold;
-    text-align: left;
-    /* background: #000000; */
+
+.signup-heading {
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+    /* overflow: hidden; */
+    margin-top: 2rem;
+    margin: 20px 30px;
 }
-  
-.img{    
+
+.signup-illustrator {
     width: 300px;
-    height: 325px;
-    margin-top: 50%;
+    height: 350px;
+    margin-right: 40%;
     margin-left: 11%;
+    /* margin-top: 2rem; */
 }
-  
-.flex2 {
+
+.signup-flex2 {
     flex: 2;
     background-color: white;
     border-radius: 0px 60px 60px 0px;
     position: relative;
 }
-  
-.heading {
-    position: absolute;
-    width: 50%;
-    left: -8px;
-    top: -1%;
+
+.signup-heading2 {
     font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-left: 6%;
+    font-size: 40px;
+    line-height: 58px;
 }
-  .fname{
+
+.signup-fname {
     position: absolute;
-    left:4%;
-    top:23%; 
+    left: 5%;
+    top: 20%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size:60%;
-  }
-  .mname{
-    position: absolute;
-    left:35%;
-    top:23%; 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size:60%;
-  }
-  .lname{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size:60%;
-    left: 66%;
-    top: 23%;
-  }
-  .mail{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size:60%;  
-    left: 4%;
-    top: 36%;
-    
-  }
-  .contact{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    /* font-weight: 600; */
-    font-size:60%;
-    left: 4%;
-    top: 49%;
-  }
-  .institute{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    /* font-weight: 600; */
-    font-size:60%;
-    left: 40%;
-    top: 49%;
-  }
-  .pwd{
-    position: absolute;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 600;
-    font-size:60%;
-    left: 4%;
-    top: 62%;
-  }
-input {
-    margin-bottom: 35px;
+    font-size: 90%;
 }
-input[type="firstname"] {
-    width: 25%;
+
+#sp1 {
+    width: 35%;
     border-radius: 11px;
     height: 2rem;
     position: absolute;
     left: 4%;
-    top: 28%;
+    top: 24%;
 }
-input[type="middlename"] {
+
+/* .signup-mname {
+    position: absolute;
+    left: 35%;
+    top: 23%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60%;
+}
+
+#sp2{
     width: 25%;
     border-radius: 11px;
     height: 2rem;
     position: absolute;
     left: 35%;
     top: 28%;
+    visibility: hidden;
+} */
+
+.signup-lname {
+    position: absolute;
+    left: 45%;
+    top: 20%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
 }
-input[type="lastname"] {
-    width: 25%;
+
+#sp3 {
+    width: 35%;
     border-radius: 11px;
     height: 2rem;
     position: absolute;
-    left: 66%;
-    top: 28%;
+    left: 44%;
+    top: 24%;
 }
-input[type="email"] {
+
+.signup-mail {
     position: absolute;
-    top: 41%;
-    left: -3.5%;   
-    width: 72%;
+    left: 5%;
+    top: 32%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+#sp4 {
+    width: 75%;
     border-radius: 11px;
     height: 2rem;
-}
-input[type="contactno"] {
     position: absolute;
-    top: 54%;
     left: 4%;
-    width: 30%;
+    top: 37%;
+}
+
+.signup-contact {
+    position: absolute;
+    left: 5%;
+    top: 46%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+#sp5 {
+    width: 75%;
     border-radius: 11px;
     height: 2rem;
+    position: absolute;
+    left: 4%;
+    top: 51%;
 }
-input[type="text"] {
+
+/* .signup-institute {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 60%;
+    left: 40%;
+    top: 49%;
+} */
+
+.signup-pwd {
+    position: absolute;
+    left: 5%;
+    top: 60%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 90%;
+}
+
+#sp7 {
+    width: 75%;
+    border-radius: 11px;
+    height: 2rem;
+    position: absolute;
+    left: 4%;
+    top: 65%;
+}
+
+
+
+
+
+/* #sp6 {
     position: absolute;
     top: 54%;
     left: 40%;
     width: 30%;
     border-radius: 11px;
     height: 2rem;
-}
-input[type="password"] {
+} */
+
+
+
+/* .form1 {
+    height: 390px;
+    margin-top: 76px;
+    font-weight: bold;
+    font-size: 30px;
+} */
+
+#sp9 {
+    font-family: 'Inter';
+    font-weight: bold;
+    font-size: 23px;
+    width: 75%;
+    height: 7%;
+    background: #0cb6f0;
+    color: white;
+    border-radius: 15px;
     position: absolute;
-    top: 67%;
-    left: 1.5%;
-    width: 72%;
+    bottom: 18%;
+    left: 4%;
+    overflow: hidden;
+
+}
+
+#sp9:hover {
+    cursor: pointer;
+    background-color: #8786ca;
+    transition-duration: 400ms;
+}
+
+.signup-login-account {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: gray;
+    position: absolute;
+    top: 86%;
+    left: 1%;
+}
+
+@media (max-width: 767px) {
+    .signup-flex1 {
+        display: none;
+    }
+
+    .signup-heading2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 767px) {
+    .signup-heading {
+        font-size: 2rem;
+    }
+}
+
+.signup-cpwd {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60%;
+    left: 48%;
+    top: 62%;
+}
+
+#sp8 {
+    position: absolute;
+    top: 66%;
+    left: 48%;
+    width: 36%;
     border-radius: 11px;
     height: 2rem;
 }
-  
-.form1 {
-    height: 390px;
-    margin-top: 76px;
-    /* margin-left: 146px; */
-    font-weight: bold;
-    font-size: 30px;
-    /* border: 1px solid red; */
-}
-  
-button {
+
+
+
+/* button {
     font-family: "Inter";
     font-weight: bold;
     font-size: 23px;
@@ -215,39 +288,11 @@ button {
     color: white;
     border-radius: 7px;
     transition: background-color 200ms ease-in-out;
-    transition:  transform  500ms ease-in;
+    transition: transform 500ms ease-in;
 }
-  
+
 button:hover {
     cursor: pointer;
     background-color: #8786ca;
     transform: scale(1.05);
-}
-  
-.create {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: left;
-    color: gray;
-    position: absolute;
-    top: 86%;
-    left: 1%;
-}
-@media (max-width: 767px) {
-    .flex1 {
-      display: none;
-    }
-    .heading {
-        font-size: 1.5rem;
-      }
-  }
-  @media (min-width: 767px) {
-    .heading {
-      font-size: 2rem;
-    }
-  }
-  
-  
+} */

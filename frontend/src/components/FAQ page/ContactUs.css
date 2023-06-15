@@ -1,0 +1,144 @@
+
+/* Contact us form */
+.faq-flex1 {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #F2F5FF;
+}
+  
+.contactus-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    background-color: #F2F5FF;
+    margin-bottom: 20px;
+}
+  
+.contact-form {
+    padding: 20px;
+    border-radius: 10px;
+}
+  
+.doubt-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.faq-lable {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex-basis: 45%;
+}
+  
+.faq-fields
+{
+    padding: 10px;
+    border: 1px solid rgb(78, 172, 255);
+    border-radius: 5px;
+    outline: none;
+    width: 100%; /* Adjust input field width to fit the container */
+}
+  
+.faq-massage {
+    padding: 5px;
+    border: 1px solid rgb(78, 172, 255);
+    border-radius: 5px;
+    outline: none;
+    height: 4rem;
+    width: 100%; /* Adjust input field width to fit the container */
+}
+  
+.sub-btn {
+    background-color: rgb(78, 172, 255);
+    color: white;
+    border: none;
+    border-radius: 60px;
+    padding: 1% 1.5%; /* Adjust padding to decrease button width */
+    cursor: pointer;
+    margin-left: 0.5%;
+    margin-right: 88%;
+    align-self: flex-start; /* Align the button to the left */
+    margin-top: 10px;
+}
+ 
+  
+  
+
+
+
+
+
+/* .flex1 {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    background-color: #F2F5FF;
+  
+  }
+  
+  .contactus-title{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    background-color: #F2F5FF;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    flex-basis: 45%;
+  }
+  
+  input[type="firstname"],
+  input[type="lastname"],
+  input[type="email"],
+  input[type="contactno"]{
+    padding: 10px;
+    border: 1px solid rgb(78, 172, 255);
+    border-radius: 5px;
+    outline: none;
+  }
+  input[type="message"] {
+    padding: 5px;
+    border: 1px solid rgb(78, 172, 255);
+    border-radius: 5px;
+    outline: none;
+    height: 4rem;
+    width: 208%;
+  }
+  
+  .sub-btn{
+    background-color: rgb(78, 172, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 0%;
+    cursor: pointer;
+    font-weight: bold;
+    flex-basis: 60%;
+    margin-top: 10px;
+  } */
