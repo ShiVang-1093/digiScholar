@@ -3,7 +3,8 @@ import "./Testinomial.css";
 import 'typeface-montserrat';
 
 
-const MyTest = ({ img, heading, paragraph, show }) => {
+const MyTest = (props) => {
+  const scholarshipData = props.data;
   const [expanded, setExpanded] = useState(false);
 
   const toggleContent = () => {
@@ -12,16 +13,9 @@ const MyTest = ({ img, heading, paragraph, show }) => {
 
   return (
     <div className={`tstnml ${expanded ? "expanded" : "collapsed"}`}>
-      <div className="sch-img">
-        <img src={img} alt="Image" />
-      </div>
       <div className="tst-content">
-        <h2>{heading}</h2>
-        <p>{paragraph}</p>
-        {expanded && <p>{show}</p>}
-        <button className="read-btn" onClick={toggleContent}>
-          {expanded ? "Read less" : "Read more"}
-        </button>
+        <h2>{scholarshipData.name}</h2>
+        <p>{scholarshipData.testimonial}</p>
       </div>
     </div>
   );

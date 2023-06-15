@@ -34,7 +34,7 @@ const Testinomial = () => {
                 <h3 className="tst-heading">Stories of successfull scholarships</h3>
                 {
                     tests.testimonials.map((testd, index) => {
-                        return <MyTest key={index} {...testd} />;
+                        return <MyTest key={index} data={testd} />;
                     })
                 }
             </div>

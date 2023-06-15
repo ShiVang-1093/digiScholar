@@ -4,8 +4,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* Align cards to the top */
-  background-color:#F6F6F6;
+  align-items: flex-start;
+  /* Align cards to the top */
+  background-color: #F6F6F6;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 12px;
   padding: 20px;
@@ -87,10 +88,12 @@
   border-radius: 4px;
   cursor: pointer;
   width: fit-content;
-  margin-top: auto; /* Align at the bottom */
+  margin-top: auto;
+  /* Align at the bottom */
   box-shadow: 0 2px 4px rgba(225, 60, 60, 0.733);
   margin-top: 10px;
-  margin-bottom: 0; /* Add margin bottom 0 */
+  margin-bottom: 0;
+  /* Add margin bottom 0 */
   margin-right: -70%;
 }
 
@@ -106,8 +109,10 @@
 
 /* Testimonial card expanded content */
 .tstnml.expanded .tst-content .read-btn {
-  margin-top: auto; /* Move the button to the end */
-  margin-bottom: 10px; /* Add margin bottom to create space */
+  margin-top: auto;
+  /* Move the button to the end */
+  margin-bottom: 10px;
+  /* Add margin bottom to create space */
 }
 
 
