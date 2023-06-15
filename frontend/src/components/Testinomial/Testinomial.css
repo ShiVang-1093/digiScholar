@@ -5,19 +5,24 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start; /* Align cards to the top */
-  background-color: rgb(237, 237, 237);
+  background-color:#F6F6F6;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(15, 12, 12, 0.733);
   margin: 2%;
 }
 
 /* Heading */
 .tst-heading {
-  font-size: 20px;
   color: rgb(0, 0, 0);
   margin-bottom: 20px;
   text-align: center;
   width: 100%;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
 }
 
 /* Testimonial card container */
@@ -33,7 +38,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* height: 600px; */
+  border-radius: 10px;
 }
 
 /* Testimonial card image */
@@ -41,7 +46,7 @@
   width: 100%;
   max-width: 200px;
   height: auto;
-  border-radius: 50%;
+  border-radius: 10px;
 }
 
 /* Testimonial card content */
@@ -51,13 +56,21 @@
 
 /* Testimonial card heading */
 .tstnml .tst-content h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
   font-size: 24px;
+  line-height: 29px;
   margin-bottom: 10px;
 }
 
 /* Testimonial card paragraph */
 .tstnml .tst-content p {
-  font-size: 16px;
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
   margin-bottom: 20px;
   max-height: 150px;
   overflow: hidden;
@@ -95,10 +108,6 @@
 .tstnml.expanded .tst-content .read-btn {
   margin-top: auto; /* Move the button to the end */
   margin-bottom: 10px; /* Add margin bottom to create space */
-}
-.tst-flex::after {
-  content: "";
-  flex: auto;
 }
 
 

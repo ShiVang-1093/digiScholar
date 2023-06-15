@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import "./FAQs.css";
 import "./ContactUs.css";
 // import { Link } from "react-router-dom";
+import 'typeface-montserrat';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -46,7 +47,7 @@ function ContactUs() {
         <div className="contact-form">
         <form className="doubt-form">
         <label className="faq-lable">
-            <div className="fname">First name:</div>            
+            <div className="faq-field">First name:</div>            
             <input 
               className="faq-fields"
               type="firstname"
@@ -58,7 +59,7 @@ function ContactUs() {
             />
           </label>
           <label className="faq-lable">
-            <div className="lname">Last name:</div>            
+            <div className="faq-field">Last name:</div>            
             <input
               className="faq-fields"
               type="lastname"
@@ -72,7 +73,7 @@ function ContactUs() {
           <br/>
           <br/>
           <label className="faq-lable">
-            <div className="mail">Email:</div>
+            <div className="faq-field">Email:</div>
             <input
               className="faq-fields"
               type="email"
@@ -84,7 +85,7 @@ function ContactUs() {
             />
           </label>
           <label className="faq-lable">
-            <div className="contact">Contact Number:</div>
+            <div className="faq-field">Contact Number:</div>
             <input
               className="faq-fields"
               type="contactno"
@@ -97,14 +98,14 @@ function ContactUs() {
           </label>
           <br/>
           <label className="faq-lable">
-          <div className="message">Message:</div>
+          <div className="faq-field">Message:</div>
             <input
             className="faq-massage"
               type="message"
               name="message"
               onChange={handleChange}
               required 
-              value={formData.password}
+              value={formData.message}
             />
           </label>
           <br/>

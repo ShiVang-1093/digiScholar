@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import MyFaq from "./MyFaq";
 import "./FAQs.css";
 import ContactUs from "./ContactUs";
+import 'typeface-montserrat';
 
 const Faq = () => {
   const [data, setData] = useState();
@@ -40,7 +41,7 @@ const Faq = () => {
             return <MyFaq key={curele.answer} {...curele} />;
           })}
           <div className="contact-us">
-            <div>
+            <div className="still-que">
               <h3>Still Have Questions?</h3>
               <p>If you are still confused, get in touch with our team</p>
             </div>

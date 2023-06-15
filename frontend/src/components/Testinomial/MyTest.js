@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Testinomial.css";
+import 'typeface-montserrat';
+
 
 const MyTest = ({ img, heading, paragraph, show }) => {
   const [expanded, setExpanded] = useState(false);
