@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './SchDetails.css';
+import 'typeface-montserrat';
+
 
 const SchDetails = ({ data }) => {
   const [showEligibility, setShowEligibility] = useState(false);

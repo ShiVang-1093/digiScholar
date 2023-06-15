@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./FAQs.css";
+import 'typeface-montserrat';
+
 
 const MyFaq = ({ question, answer }) => {
     const [show, setShow] = useState(false);
