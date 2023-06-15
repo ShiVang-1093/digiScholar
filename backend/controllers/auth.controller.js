@@ -43,9 +43,9 @@ exports.registerUser = async (req, res) => {
             contact
         });
 
-        if (password !== confirm_password) {
-            return res.status(400).json({ msg: 'Password does not match' });
-        }
+        // if (password !== confirm_password) {
+        //     return res.status(400).json({ msg: 'Password does not match' });
+        // }
 
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
