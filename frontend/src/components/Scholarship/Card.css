@@ -1,14 +1,23 @@
 /* @import '~typeface-nunito-sans'; */
 
-.Card-main{
+.Card-main {
   display: flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row-reverse; */
   background: #E3F3F9;
   border-radius: 45px;
   /* border: 5px solid red; */
   margin-bottom: 5%;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
+
+.Card-main:nth-child(even) {
+  flex-direction: row;
+}
+
+.Card-main:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
 
 /* .Card-main.odd {
   display: flex;
@@ -89,7 +98,7 @@
   background: #E3F3F9;
 }
 
-.deadline > p {
+.deadline>p {
   font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 400;
@@ -125,8 +134,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.visitbtn{
-  margin-left: 65%;
+.visitbtn {
+  margin-left: 35%;
 }
 
 .visit-button {

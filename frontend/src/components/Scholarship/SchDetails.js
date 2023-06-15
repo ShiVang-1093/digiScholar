@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import './SchDetails.css';
 
 const SchDetails = ({ data }) => {
@@ -16,9 +16,9 @@ const SchDetails = ({ data }) => {
     setShowResources(true);
   };
 
-  if (!scholarship) {
-    return <div>Scholarship not found.</div>;
-  }
+  // if (!scholarship) {
+  //   return <div>Scholarship not found.</div>;
+  // }
 
   return (
     <div className="page-container">
@@ -34,7 +34,7 @@ const SchDetails = ({ data }) => {
                 <>{content}</>
               </li>
             ))}
-          </ul>          
+          </ul>
           <p>{data.para}</p>
         </div>
       </div>

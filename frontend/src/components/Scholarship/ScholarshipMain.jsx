@@ -96,12 +96,13 @@ export default function ScholarshipMain() {
         if (sortedData.length === 0) {
             return <h2>No scholarships found.</h2>;
         }
-
-        return sortedData.map((scholarship) => (
-            <div className="data-main" key={scholarship._id}>
-                <Card data={scholarship} />
+        return (
+            <div className="data-main d-flex flex-column">
+                {sortedData.map((scholarship) => (
+                    <Card data={scholarship} key={scholarship._id} />
+                ))}
             </div>
-        ));
+        );
     };
 
     return (
@@ -145,7 +146,7 @@ export default function ScholarshipMain() {
                     </select>
                 </div>
                 <div className="s-bar">
-                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                    {/* <FontAwesomeIcon icon={faSearch} className="search-icon" /> */}
                     <input
                         type="search-bar"
                         value={searchTerm}
