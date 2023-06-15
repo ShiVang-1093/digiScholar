@@ -2,6 +2,8 @@ import React from 'react';
 import SchDetails from './SchDetails';
 import { det } from './Schapi'; // Assuming you have the data in a separate file
 import './SchDetails.css';
+import 'typeface-montserrat';
+
 
 const Details = () => {
   return (

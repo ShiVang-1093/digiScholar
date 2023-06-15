@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './SchDetails.css';
+import 'typeface-montserrat';
+
 
 const SchDetails = ({ data }) => {
   const [showEligibility, setShowEligibility] = useState(false);

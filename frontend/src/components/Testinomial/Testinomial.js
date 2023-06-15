@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import MyTest from "./MyTest";
 import { testdata } from "./testapi";
 import "./Testinomial.css";
+import 'typeface-montserrat';
+
 
 
 const Testinomial = () => {
