@@ -1,46 +1,31 @@
-<<<<<<< HEAD
-* {
-    background: white;
-=======
 /* * {
     background: white;
 } */
+
+@import 'typeface-montserrat';
 
 /*  set color transperent for carousel button */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     background-color: transparent !important;
     border: none;
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 }
 
 .carousel-inner {
     margin-top: 2%;
     text-align: center;
     /* border: 2px solid red; */
-<<<<<<< HEAD
-  }
-  
-=======
 }
 
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 .carousel-item img {
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
-<<<<<<< HEAD
-    width: 90%; 
-}
-
-.testinomial-heading{
-=======
     width: 90%;
 }
 
 .testinomial-heading {
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
     /* border: 2px solid black; */
     text-align: center;
     font-family: 'Montserrat';
@@ -50,26 +35,16 @@
     line-height: 44px;
 }
 
-<<<<<<< HEAD
-.card-img-top-testi-firstimg{
-    border-radius: 75px 0px 0px 0px;
-}
-
-.card-img-top-testi-thirdimg{
-=======
 .card-img-top-testi-firstimg {
     border-radius: 75px 0px 0px 0px;
 }
 
 .card-img-top-testi-thirdimg {
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
     border-radius: 0px 75px 0px 0px;
 }
 
 .testi-card {
     background-color: #dbe3fd;
-<<<<<<< HEAD
-=======
 }
 
 .testi-btn {
@@ -489,223 +464,38 @@ center>p {
 
 /* .testi-card {
     background-color: #DBE3FD;
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 }
 
 .testi-btn {
-    font-weight: bolder;
-    background: #0cb6f0;
+    background: #0CB6F0;
     border-radius: 50px;
-    border: 2px solid #0cb6f0 !important;
+    border: 2px solid #0CB6F0 !important;
 }
 
 .testi-btn:hover {
-    background: #0cb6f0;
+    background: #0CB6F0;
     border-radius: 50px;
-    border: 2px solid #0cb6f0 !important;
-}
-
-.btnlearnmore{
-    text-decoration: none;
-    color: white;
-    font-weight: bolder;
-    padding: 9px;
-    background: #0cb6f0;
-    border-radius: 50px;
-    margin-left: 70%;
-    border: 2px solid #0cb6f0 !important;
-}
-
-.btnlearnmore:hover {
-    background: #0cb6f0;
-    border-radius: 50px;
-    border: 2px solid #0cb6f0 !important;
-}
-
-
-
-.card-body {
-    background-color: #dbe3fd !important;
-    border-radius: 0px 0px 60px 60px;
-}
-
-.card-title,
-.card-text,
-.btnknowmore {
-    background-color: transparent;
-}
-
-.sch-homepage {
-    width: 100%;
-    /* border: 2px solid red; */
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 5px;
-    /* background-color: aquamarine !important; */
-}
-
-.container {
-    padding: 15px;
-    margin-top: 5%;
-    border-radius: 20px;
-}
-
-.sch-homepage > h1 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 32px;
-    line-height: 39px;
-}
-
-.sch-homepage > h1,
-p {
-    text-align: left;
-    background-color: transparent;
-}
-
-.thirdimage {
-    margin-left: 1%;
-    width: 47%;
-}
-
-.find-best-1 {
-    width: 300px;
-    border-radius: 10px;
-    height: 380px;
-}
-
-.find-best-2 {
-    margin-top: -60%;
-    margin-left: 45%;
-    width: 300px;
-    height: 380px;
-    border-radius: 10px;
-}
-
-.find-best-3 {
-    margin-left: 35%;
-    width: 300px;
-    border-radius: 10px;
-    height: 380px;
-}
-
-.testinomails{
-    background: white;
-}
-.testi-btn:hover {
-    background: #0cb6f0;
-    border-radius: 50px;
-    border: 2px solid #0cb6f0 !important;
+    border: 2px solid #0CB6F0 !important;
 }
 
 .testi-first-story {
     border-radius: 75px 0px 60px 60px;
-    margin-top: 8%;
-}
-.testi-first-story:hover{
-    border-radius: 0px 0px 60px 60px;
-    margin-top: -5%;
 }
 
 .testi-second-story {
     border-radius: 0px 0px 60px 60px;
-    margin-top: 4.4%;
-}
-.testi-second-story:hover{
-    border-radius: 0px 0px 60px 60px;
-    margin-top: -8%;
 }
 
 .testi-third-story {
     border-radius: 0px 75px 60px 60px;
-    margin-top: 8%;
-}
-.testi-third-story:hover{
-    border-radius: 0px 0px 60px 60px;
-    margin-top: -5%;
 }
 
-.card-body-news{
-    padding: 18px;
-    border-radius: 5px;
-}
-.newsmain{
-    background: #F7F7F7;
-    padding-bottom: 8px;
-}
-
-center{
-    background: transparent;
-}
-
-.moreblog{
-    background: transparent;
-}
-
-.newstitle{
-    font-family: "Montserrat";
-    background: transparent;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    padding-top: 5px;
-}
-
-.card-title-news {
-    font-family: "Montserrat";
-    text-align: left;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-.card-text-news{
-    font-family: 'Nunito Sans';
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 22px;  
-}
-
-.morenews{
-    background: transparent;
-}
-
-.see-more-link-news {
-    color: #0cb6f0;
+.see-more-link {
+    color: #0CB6F0;
     font-weight: bold;
     text-decoration: none;
-    margin-top: 20%;
-    background: #F7F7F7;
 }
 
-<<<<<<< HEAD
-.home-page-sch-title {
-    /* border: 2px solid black ; */
-    margin-top: 4%;
-    background: #f2f5ff;
-    padding-bottom: 25px;
-    padding-top: 1px;
-}
-
-.home-page-sch-title > h1 {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 44px;
-    background-color: transparent;
-    margin-top: 4%;
-    text-align: center;
-}
-
-.accordion-button::after {
-    background-image: url("../public/Images/Plus_Icon.png");
-=======
 #blog-sec{
     background-color: #F2F5FF;
     margin-top: 3%;
@@ -736,15 +526,14 @@ center{
 
 .accordion-button::after {
     background-image: url('../public/Images/Plus_Icon.png');
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: #f2f5ff;
+    background-color: #F2F5FF;
 }
 
 .accordion-button:not(.collapsed)::after {
-    background-image: url("../public/Images/Minus_Icon.png");
+    background-image: url('../public/Images/Minus_Icon.png');
     border-radius: 10px;
 }
 
@@ -754,15 +543,15 @@ center{
 }
 
 .accordion-body {
-    background: #f2f5ff;
+    background: #F2F5FF;
 }
 
 .accordion-button {
-    background: #f2f5ff;
+    background: #F2F5FF;
 }
 
 .still-que {
-    background-color: #f2f5ff;
+    background-color: #F2F5FF;
 }
 
 .faq-contact {
@@ -771,12 +560,12 @@ center{
     padding: 1.7em;
 }
 
-.faq-contact > * {
-    color: #ffffff;
+.faq-contact>* {
+    color: #FFFFFF;
 }
 
 .faq-options {
-    background: #f2f5ff;
+    background: #F2F5FF;
     border-radius: 0px 25px 25px 0px;
     padding: 1em;
 }
@@ -784,138 +573,4 @@ center{
 .faq-options-li {
     list-style-type: none;
     margin: 10px;
-<<<<<<< HEAD
-} 
-
-.see-more-link-blog {
-    color: #0cb6f0;
-    font-weight: bold;
-    text-decoration: none;
-    background: #F7F7F7;
-    margin-top: 20%;
-}
-
-.card-body-blog{
-    padding: 18px;
-    border-radius: 5px;
-}
-
-.card-title-blog {
-    font-family: "Montserrat";
-    text-align: left;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-.card-text-blog{
-    font-family: 'Nunito Sans';
-    text-align: left;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 22px;  
-}
-
-.card-img-top-blog{
-    padding: 15px;
-}
-
-#blog-sec{
-    background-color: #F2F5FF;
-    margin-bottom: 3%;
-    width: 100%;
-    padding-bottom: 2%;
-
-}
-.mt-3{
-    margin-bottom: 7%;
-    background-color: #F2F5FF;
-}
-#freq-asked-que{
-    margin-top: 2%;
-    margin-bottom: 5%;
-}
-
-center > p{ 
-    text-align: center;
-}
-
-#still-que > h2{
-    background: transparent;
-}
-
-.col-md-7{
-    margin-left: 3%;
-}
-#footer-sec{
-    margin-bottom: 1%;
-    
-}
-
-#footer-sec > .footer-inner{
-    background: black;
-}
-
-.footer-inner > *{
-    background: black;
-}
-
-.rowone,.rowtow,.rowthree,.rowfour{
-    background: black;
-}
-
-.rowone > .col-3,.col-9,.phnimg{
-    background: black;
-}
-
-.rowtwo > .col-3,.col-9,.mailimg{
-    background: black;
-}
-
-.rowthree > .col-3,.col-9,.locimg{
-    background: black;
-}
-
-.rowthree{
-    display: flex;
-}
-
-.rowthree > .india{
-    background: transparent;
-}
-
-.rowfour > .mx-3{
-    background: black;
-}
-
-#more-questions{
-    margin-left: 50%;
-    width: 11%;
-    margin-right: 40%;
-    margin-top: 2%;
-}
-
-.digiimg{
-    background: #F2F5FF;
-}
-
-.digiimg > img{
-    background: #F2F5FF ;
-}
-
-.opt>h2{
-    background: transparent;
-}
-
-.col-3{
-    background: #F2F5FF ;
-}
-
-.faq-options-li{
-    background: #F2F5FF ;
-}
-=======
 } */
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04

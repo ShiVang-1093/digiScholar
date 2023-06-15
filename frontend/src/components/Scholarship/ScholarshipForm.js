@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './ScholarshipForm.module.css';
+
 const ScholarshipForm = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');

@@ -3,7 +3,6 @@ import { NavLink } from 'react-router-dom';
 import './style.css';
 import Logo from "./DigiScholar.svg";
 import usericon from "./usericon.svg";
-import './style.css';
 import isLoggedin from '../../Helpers/isLoggedin';
 
 const Navbar = () => {
