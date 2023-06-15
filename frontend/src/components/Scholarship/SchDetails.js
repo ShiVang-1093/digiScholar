@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useParams} from 'react-router-dom';
 import './SchDetails.css';
 
 const SchDetails = ({ data }) => {
@@ -14,6 +15,10 @@ const SchDetails = ({ data }) => {
     setShowEligibility(false);
     setShowResources(true);
   };
+
+  if (!scholarship) {
+    return <div>Scholarship not found.</div>;
+  }
 
   return (
     <div className="page-container">

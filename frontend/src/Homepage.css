@@ -2,6 +2,8 @@
     background: white;
 } */
 
+@import 'typeface-montserrat';
+
 /*  set color transperent for carousel button */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
