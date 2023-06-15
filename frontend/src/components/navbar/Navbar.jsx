@@ -3,11 +3,8 @@ import { NavLink } from 'react-router-dom';
 import './style.css';
 import Logo from "./DigiScholar.svg";
 import usericon from "./usericon.svg";
-<<<<<<< HEAD
 import './style.css';
-=======
 import isLoggedin from '../../Helpers/isLoggedin';
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 
 const Navbar = () => {
     const isLoggedIn = isLoggedin(); // Check if the user is logged in

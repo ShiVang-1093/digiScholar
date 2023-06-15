@@ -1,5 +1,4 @@
 .logo {
-<<<<<<< HEAD
     height: 38px;
     width: 230 px;
   }
@@ -27,12 +26,9 @@
     color: #202020; 
 }   
 .active-here{
-    color: #0CB6F0;
-  
-=======
+  color: #0CB6F0;
   height: 38px;
   width: 230 px;
->>>>>>> 8b4e2c726108d6f28eedf50ae51e8b403952de04
 }
 
 @media (max-width: 576px) {
