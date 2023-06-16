@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-
+import './style.css';
 const NewsCard = ({ id, image, title, description, createdAt }) => {
   const getTimeDifference = (createdTime) => {
     const currentTime = new Date();
@@ -22,15 +22,15 @@ const NewsCard = ({ id, image, title, description, createdAt }) => {
   return (
     <div className="news-card">
       <div className="news-content">
-        <h2 className='heading'>{title}</h2>
-        <div className='description'><p className='desc'>{description}</p></div>
-        <p className='timestamp'>{formattedTime}</p>
-        <div className='btn'>
-          <NavLink className='btn-text' to={`/news/${id}`}>Read more</NavLink>
+        <h2 className='news-heading'>{title}</h2>
+        <div className='news-description'><p className='news-desc'>{description}</p></div>
+        <p className='news-timestamp'>{formattedTime}</p>
+        <div className='news-read-btn'>
+          <NavLink className='news-btn-text' to={`/news/${id}`}>Read more</NavLink>
         </div>
       </div>
     </div >
   );
 };
 
-export default NewsCard;
+export default NewsCard; 

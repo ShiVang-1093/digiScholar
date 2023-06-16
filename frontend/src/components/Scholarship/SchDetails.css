@@ -249,6 +249,45 @@
   cursor: pointer;
   position: absolute; 
 }
+/* modal css */
+/* .m0{
+  display: flex;
+  width: 100%;
+  justify-content: center
+} */
+
+.modal-form{
+  display: flex;
+}
+.modal-flex2{
+  width: 50%;
+  
+}
+.modal-flex1{
+  width: 50%;
+  margin-left: 5%;
+}
+.m1{
+  width: 1100px;
+  margin-left: -300px;
+  background-color: #E3F3F9;
+  
+}
+.modal-fields{
+  width: 38%;
+  margin-left: 2%;
+}
+
+.modal-IO-fields{
+  width: 150%;
+  border-radius: 5px;
+  border:2px #0CB6F0 solid;
+}
+
+
+
+
+
 
 
 /* .det-main {
