@@ -3,12 +3,13 @@ import { NavLink } from 'react-router-dom';
 import './style.css';
 import Logo from "./DigiScholar.svg";
 import usericon from "./usericon.svg";
-
+import isLoggedin from '../../Helpers/isLoggedin';
 
 const Navbar = () => {
+    const isLoggedIn = isLoggedin(); // Check if the user is logged in
     return (
         <>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+            <nav className="navbar navbar-expand-lg bg-body-tertiary">
                 <div className="container-fluid shadow-lg mt-0">
                     <NavLink to="/">
                         <img
@@ -30,71 +31,123 @@ const Navbar = () => {
                     >
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    {/* <div className="d-flex justify-content-center"> */}
                     <div
-                        className="collapse navbar-collapse items"
+                        className="collapse navbar-collapse items ms-auto"
                         id="navbarSupportedContent"
                     >
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li className="nav-item ms-1">
                                 <NavLink
-                                    className="nav-link active-here"
-                                    aria-current="page"
+                                    exact
+                                    className={({ isActive }) =>
+                                        "nav-link" + (isActive ? " active-div" : "")
+                                    }
                                     to="/"
                                 >
                                     Home
                                 </NavLink>
-                                <div className="active-div"></div>
                             </li>
                             <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/scholarships">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        "nav-link" + (isActive ? " active-div" : "")
+                                    }
+                                    to="/scholarships"
+                                >
                                     Scholarship
                                 </NavLink>
                             </li>
                             <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/Blog">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        `nav-link${isActive ? ' active-div' : ''}`
+                                    }
+                                    to="/Blog"
+                                >
                                     Blog
                                 </NavLink>
                             </li>
                             <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/news">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        `nav-link${isActive ? ' active-div' : ''}`
+                                    }
+                                    to="/news"
+                                >
                                     News
                                 </NavLink>
                             </li>
                             <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/testimonial">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        `nav-link${isActive ? ' active-div' : ''}`
+                                    }
+                                    to="/testimonial"
+                                >
                                     Testimonials
                                 </NavLink>
                             </li>
                             <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/faq">
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        `nav-link${isActive ? ' active-div' : ''}`
+                                    }
+                                    to="/faq"
+                                >
                                     FAQs
                                 </NavLink>
                             </li>
-                            <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/login">
-                                    Login
-                                </NavLink>
-                            </li>
-                            <li className="nav-item ms-3">
-                                <NavLink className="nav-link" to="/signup">
-                                    Signup
-                                </NavLink>
-                            </li>
+                            {isLoggedIn ? (
+                                <>
+                                    <li className="nav-item ms-3">
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                `nav-link${isActive ? ' active-div' : ''}`
+                                            }
+                                            to="/logout"
+                                        >
+                                            Logout
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item ms-3">
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                `nav-link${isActive ? ' active-div' : ''}`
+                                            }
+                                            to="/profile"
+                                        >
+                                            <img src={usericon} alt="" height={30} className='m-0 p-0 mb-1' />
+                                        </NavLink>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li className="nav-item ms-3">
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                `nav-link${isActive ? ' active-div' : ''}`
+                                            }
+                                            to="/login"
+                                        >
+                                            Login
+                                        </NavLink>
+                                    </li>
+                                    <li className="nav-item ms-3">
+                                        <NavLink
+                                            className={({ isActive }) =>
+                                                `nav-link${isActive ? ' active-div' : ''}`
+                                            }
+                                            to="/signup"
+                                        >
+                                            Signup
+                                        </NavLink>
+                                    </li>
+                                </>
+                            )}
                         </ul>
-                        <NavLink to="#">
-                            <img
-                                src={usericon}
-                                className="usericon"
-                                height="30px"
-                                width="36px"
-                                alt=""
-                            />
-                        </NavLink>
                     </div>
-                    {/* </div> */}
                 </div>
-            </nav>
+            </nav >
         </>
     );
 };

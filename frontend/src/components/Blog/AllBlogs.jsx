@@ -31,21 +31,21 @@ function AllBlogs() {
       <div className="main-post">
         <div className="head">
           <h1>See Our Blogs</h1>
-          <h3>
+          <h5>
             Stay current with all the latest scholarships , applications and more.
-          </h3>
+          </h5>
         </div>
         <div className="grid">
           {data.map((post) => {
             return (
               <div className="card" key={post._id}>
-                <img className="temp-image" src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1064.jpg" alt={"Error"} />
-                <p>"{post.content}"</p>
+                <img className="temp-image" src="./Images/temp_1.png  "  alt={"Error"} />
+                  <p>"{post.content}"</p>
                 <Link to={`/blog/${post._id}`} className="link">
-                  <span className="postAuthor">{post.title}</span>
+                  <div className="postAuthor">{post.title}</div>
                 </Link><br /><br />
-                <span className="createdAt">CreatedAt :{post.createdAt}</span>
-                <span className="updatedAt">UpdatedAt :{post.updatedAt}</span>
+                {/* <span className="createdAt">CreatedAt :{post.createdAt}</span> */}
+                {/* <span className="updatedAt">UpdatedAt :{post.updatedAt}</span> */}
               </div>
             );
           })}
@@ -59,3 +59,4 @@ function AllBlogs() {
 export default AllBlogs;
 
 
+// src="https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1064.jpg"

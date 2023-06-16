@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./Blog.css";
-import dummyData from "./DummyAPI";
+// import dummyData from "./DummyAPI";
 
 function Blog() {
   const { id } = useParams();
-  // console.log(id);
+  console.log(id);
   const [post, setPost] = useState();
 
   const getPost = async () => {
@@ -30,6 +30,9 @@ function Blog() {
   return (
     <div>
       <div className="Singleblog">
+        <Link to="/Blog" className="back-link">
+          <span className="back-arrow">&#8592;</span> Back
+        </Link>
         <h2 className="Author-name">"{title.toUpperCase()}"</h2>
         <div className="singlepost">
           <img className="Author-image" src={image} alt={"Error"} />

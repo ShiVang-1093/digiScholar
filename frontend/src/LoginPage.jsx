@@ -1,8 +1,10 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
 import "./LoginPage.css";
+import isLoggedin from "./Helpers/isLoggedin";
 
 function LoginPage() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -17,6 +19,11 @@ function LoginPage() {
     }));
   };
 
+  useEffect(() => {
+    if (isLoggedin()) {
+      window.location.href = "/";
+    }
+  });
   const handleLogin = async (event) => {
     event.preventDefault();
 
@@ -40,58 +47,59 @@ function LoginPage() {
     });
     const resJson = await res.json();
     console.log(resJson);
-    localStorage.setItem("jwt", resJson.token);
     if (res.status == 400 || res.status == 500 || !res) {
       window.alert("Invalid Credentials");
       console.log("Invalid Credentials");
     }
     else if (res.status == 200) {
       window.alert("Login Successful");
+      localStorage.setItem("jwt", resJson.token);
       console.log("Login Successful");
+      window.location.href = "/";
     }
   };
 
   return (
- <div className="login-wrapper">
-     <div className="login-container">
-      <div className="login-flex1">
-        <div className="login-heading">Login To Your Account</div>
-        <div className="login-form1">
-          <form>
-            <label >
-              <div className="login-mail">Email:</div>
-              <input
-                id="dcs3"
-                type="email"
-                name="email"
-                onChange={handleChange}
-                required placeholder="abc@gmail.com"
-                value={formData.email}
-              />
-            </label >
-            { <label>
-              <div className="login-password">Password:</div>
-              <input
-                id="dcs4"
-                type="password"
-                name="password"
-                onChange={handleChange}
-                required placeholder="8 character required"
-                value={formData.password}
-              />
-            </label> }
-            <br />
-            { <button type="submit" name="Login" onClick={handleLogin} id="dsc1">Login</button> }
-          </form>
-          { <div id="dcs7">Don't have an account ? <Link to="/signup">Create Account</Link></div>  }
+    <div className="login-wrapper">
+      <div className="login-container">
+        <div className="login-flex1">
+          <div className="login-heading">Login To Your Account</div>
+          <div className="login-form1">
+            <form>
+              <label >
+                <div className="login-mail">Email:</div>
+                <input
+                  id="dcs3"
+                  type="email"
+                  name="email"
+                  onChange={handleChange}
+                  required placeholder="abc@gmail.com"
+                  value={formData.email}
+                />
+              </label >
+              {<label>
+                <div className="login-password">Password:</div>
+                <input
+                  id="dcs4"
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  required placeholder="8 character required"
+                  value={formData.password}
+                />
+              </label>}
+              <br />
+              {<button type="submit" name="Login" onClick={handleLogin} id="dsc1">Login</button>}
+            </form>
+            {<div id="dcs7">Don't have an account ? <Link to="/signup">Create Account</Link></div>}
+          </div>
         </div>
-      </div>  
-      <div className="login-flex2">
-        <div className="login-heading2">First step towards your dream Scholarship</div>
-        <img id="dcs2" src="./Images/Graduation 2.svg" alt="Error" srcset="" />
+        <div className="login-flex2">
+          <div className="login-heading2">First step towards your dream Scholarship</div>
+          <img id="dcs2" src="./Images/Graduation 2.svg" alt="Error" srcset="" />
+        </div>
       </div>
     </div>
- </div>
   );
 }
 

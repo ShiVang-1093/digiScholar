@@ -1,25 +1,31 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Card.css";
-// import "typeface-montserrat";
+import "typeface-montserrat";
 
 export default function Card(prop) {
-  console.log("props ; ", prop);
-  const isOddId = prop.data.id % 2 === 1;
-  const flexDirection = isOddId ? "row" : "row-reverse";
-  // const pointsArray = prop.data.points.split("\n");
+  console.log("props : ", prop);
+  // const isOdd = prop.data._id % 2 === 0;
+  // const cardClass = isOdd ? "Card-main odd" : "Card-main even";
+  // const flexDirecton = isOdd ? "row" : "row-reverse";
 
   return (
-    <div className="Card-main" style={{ flexDirection }}>
+    <div className="Card-main justify-content-center align-items-center">
       <img className="card-image" src={prop.data.image} alt="Error" />
-      <div className="card-point">
+      <div className="card-point d-flex justify-content-center align-itmes-center flex-column">
         <div className="title">{prop.data.name.toUpperCase()}</div>
         <div className="card-content">
-          <p>{prop.data.content}</p>
+          <p>{prop.data.description}</p>
+          <p>Amount : &#8377;{prop.data.amount}/-</p>
+          <p>It is Provided by {prop.data.provided_by}</p>
         </div>
-        <div className="text-center">
-          <a href={prop.data.scholarshipLink} className="visit-button">
+        <div className="deadline">
+          <p>Deadline : {prop.data.deadline}</p>
+        </div>
+        <div className="visitbtn">
+          <Link to={`/scholarships/${prop.data._id}`} className="visit-button">
             Visit Scholarship
-          </a>
+          </Link>
         </div>
       </div>
     </div>

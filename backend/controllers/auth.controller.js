@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const { User } = require('../models');
 
 exports.registerUser = async (req, res) => {
-    console.log("Body : ", req.body);
+
     const {
         fname,
         lname,
@@ -43,9 +43,9 @@ exports.registerUser = async (req, res) => {
             contact
         });
 
-        if (password !== confirm_password) {
-            return res.status(400).json({ msg: 'Password does not match' });
-        }
+        // if (password !== confirm_password) {
+        //     return res.status(400).json({ msg: 'Password does not match' });
+        // }
 
         const salt = await bcrypt.genSalt(10);
         user.password = await bcrypt.hash(password, salt);
@@ -100,7 +100,7 @@ exports.loginUser = async (req, res) => {
             { expiresIn: 360000 },
             (err, token) => {
                 if (err) throw err;
-                res.status(200).json({ token });
+                return res.json({ token });
             }
         );
 

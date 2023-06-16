@@ -12,6 +12,8 @@ import Blog from './components/Blog/Blog';
 import News from "./components/news/News";
 import AllNews from './components/news/AllNews';
 import AllBlogs from './components/Blog/AllBlogs';
+import Logout from './Logout';
+import SchDetails from './components/Scholarship/SchDetails';
 
 const App = () => {
   return (
@@ -21,7 +23,8 @@ const App = () => {
         <Route exact path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
-        <Route path="/details" element={<Details />} />
+        <Route path="/scholarships/:id" element={<Details />} />
+        <Route path="/logout" element={<Logout />} />
         <Route path="/testimonial" element={<Testinomial />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/blog/" element={<AllBlogs />} />
@@ -29,6 +32,7 @@ const App = () => {
         <Route path="/news" element={<AllNews />} />
         <Route path="/news/:id" element={<News />} />
         <Route path="/scholarships" element={<ScholarshipMain />} />
+        {/* <Route path="/scholarships/:id" element={<SchDetails />} /> */}
       </Routes>
     </Router>
   );

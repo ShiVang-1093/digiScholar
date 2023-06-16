@@ -5,7 +5,7 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "dev": "nodemon server.js"
+        "dev": "cls && nodemon server.js"
     },
     "author": "Manav H Joshi",
     "license": "ISC",

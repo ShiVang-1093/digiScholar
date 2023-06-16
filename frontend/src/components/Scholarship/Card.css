@@ -2,19 +2,49 @@
 
 .Card-main {
   display: flex;
+  /* flex-direction: row-reverse; */
   background: #E3F3F9;
   border-radius: 45px;
   /* border: 5px solid red; */
   margin-bottom: 5%;
-  flex-direction: row;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
 }
+
+.Card-main:nth-child(even) {
+  flex-direction: row;
+}
+
+.Card-main:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+
+/* .Card-main.odd {
+  display: flex;
+  flex-direction: row;
+  background: #E3F3F9;
+  border-radius: 45px;
+  border: 5px solid blue;
+  margin-bottom: 5%;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.Card-main.even {
+  display: flex;
+  flex-direction: row-reverse;
+  background: #E3F3F9;
+  border-radius: 45px;
+  border: 5px solid red;
+  margin-bottom: 5%;
+  filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
+} */
 
 .card-image {
   flex: 1;
   margin-top: 2.5%;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  margin-bottom: 2.5%;
   width: 530px;
   height: 280px;
   /* transition: opacity 0.3s ease; */
@@ -60,11 +90,26 @@
   width: 80%;
   text-align: left;
   margin-left: 5%;
+  margin-top: 2%;
   transition: transform 0.3s ease-in-out;
 }
 
 .card-content p {
   background: #E3F3F9;
+}
+
+.deadline>p {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  width: 80%;
+  color: red;
+  text-align: left;
+  margin-left: 5%;
+  margin-top: 2%;
+  transition: transform 0.3s ease-in-out;
 }
 
 .point {
@@ -87,6 +132,10 @@
   text-align: center;
   margin-left: 2.5%;
   transition: transform 0.3s ease-in-out;
+}
+
+.visitbtn {
+  margin-left: 35%;
 }
 
 .visit-button {
