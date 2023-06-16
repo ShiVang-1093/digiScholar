@@ -122,7 +122,7 @@ function SignupPage() {
       <div className="signup-container">
         <div className="signup-flex1">
           <div className="signup-heading">Find a best Scholarship <br />for your education</div>
-          <img className="signup-illustrator" src='./Images/Graduation 4.svg' alt="Error" srcset="" />
+          <img className="signup-illustrator" src='./Images/Graduation 4.svg' alt="Error" height={40} srcset="" />
         </div >
         <div className="signup-flex2">
           <div className="signup-heading2">Create Account</div>

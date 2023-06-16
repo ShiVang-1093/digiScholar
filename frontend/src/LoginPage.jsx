@@ -65,25 +65,27 @@ function LoginPage() {
         <div className="login-flex1">
           <div className="login-heading">Login To Your Account</div>
           <div className="login-form1">
-            <form>
-              <label >
-                <div className="login-mail">Email:</div>
+            <form className="d-flex justify-content-center align-items-center flex-column">
+              <label className="w-100 m-auto d-flex justify-content-center align-items-center">
+                <div className="login-mail ms-3 p-0">Email:</div>
                 <input
                   id="dcs3"
                   type="email"
                   name="email"
                   onChange={handleChange}
+                  className="mb-3"
                   required placeholder="abc@gmail.com"
                   value={formData.email}
                 />
               </label >
-              {<label>
-                <div className="login-password">Password:</div>
+              {<label className="w-100 m-auto d-flex justify-content-center align-items-center">
+                <div className="login-password ms-3 mb-3 p-0">Password:</div>
                 <input
                   id="dcs4"
                   type="password"
                   name="password"
                   onChange={handleChange}
+                  className=""
                   required placeholder="8 character required"
                   value={formData.password}
                 />
@@ -99,7 +101,7 @@ function LoginPage() {
           <img id="dcs2" src="./Images/Graduation 2.svg" alt="Error" srcset="" />
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

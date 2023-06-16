@@ -37,8 +37,8 @@ const Faq = () => {
             <h3>Frequently asked question</h3>
             <p>Everything you need to know about scholarships</p>
           </div>
-          {data.faqs.map((curele) => {
-            return <MyFaq key={curele.answer} {...curele} />;
+          {data.faqs.map((curele, index) => {
+            return <MyFaq key={curele.answer} {...curele} index={index} />;
           })}
           <div className="contact-us">
             <div className="still-que">

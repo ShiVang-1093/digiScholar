@@ -107,14 +107,6 @@ export default function ScholarshipMain() {
 
     return (
         <>
-            <div className="ScholarshipMain">
-                <img
-                    className="main-image"
-                    src="./Images/image 5.png"
-                    alt="Error"
-                    srcSet=""
-                />
-            </div>
             <br />
             <br />
             <br />
@@ -146,7 +138,7 @@ export default function ScholarshipMain() {
                     </select>
                 </div>
                 <div className="s-bar">
-                    {/* <FontAwesomeIcon icon={faSearch} className="search-icon" /> */}
+                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
                     <input
                         type="search-bar"
                         value={searchTerm}
@@ -155,6 +147,14 @@ export default function ScholarshipMain() {
                         onChange={handleSearch}
                     />
                 </div>
+            </div>
+            <div className="ScholarshipMain">
+                <img
+                    className="main-image"
+                    src="./Images/image 5.png"
+                    alt="Error"
+                    srcSet=""
+                />
             </div>
             {renderCards()}
         </>

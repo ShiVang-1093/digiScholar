@@ -39,7 +39,7 @@ const HomePage = () => {
             {/* Testimonial sections starts */}
             <div className="testinomial-heading">Inspirational Stories</div>
             <div className="testinomails d-flex justify-content-center align-items-center">
-                <div className="card mx-4 testi-card testi-first-story" style={{ width: "18rem" }}>
+                <div className="card mx-4 testi-card testi-first-story" style={{ width: "18rem", border: "none" }}>
                     <img src="./Images/Testi_Home_1.png" className="card-img-top-testi-firstimg" alt="Testi_Story" />
                     <div className="card-body">
                         <h5 className="card-title">“This scholarship influenced my decision to attend Illinois.”</h5>
@@ -49,7 +49,7 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card mx-4 testi-card testi-second-story" style={{ width: "18rem" }}>
+                <div className="card mx-4 testi-card testi-second-story" style={{ width: "18rem", border: "none" }}>
                     <img src="./Images/Testi_Home_2.png" className="card-img-top" alt="Testi_Story" />
                     <div className="card-body">
                         <h5 className="card-title">“I continue to be thankful for financial support.”</h5>
@@ -59,7 +59,7 @@ const HomePage = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card mx-4 testi-card testi-third-story" style={{ width: "18rem" }}>
+                <div className="card mx-4 testi-card testi-third-story" style={{ width: "18rem", border: "none" }}>
                     <img src="./Images/Testi_Home_3.png" className="card-img-top-testi-thirdimg" alt="Testi_Story" />
                     <div className="card-body">
                         <h5 className="card-title">“This scholarship allows me to approach my day to day with less of a worry.”</h5>
@@ -91,7 +91,7 @@ const HomePage = () => {
                 </div>
                 <div className="container d-flex justify-content-end align-items-center">
                     <div className="col-md-6">
-                        <div className="sch-homepage">
+                        <div className="sch-homepage d-flex align-items-start flex-column">
                             <h1>International Peace Scholarship</h1>
                             <p>
                                 The International Peace Scholarship is a prestigious award offered to women from countries outside the United States and Canada who are pursuing graduate degrees in any field of study. The scholarship is administered by the P.E.O. Sisterhood, a philanthropic organization dedicated to empowering women through education. Recipients are chosen based on their academic achievements, financial need, and dedication to promoting peace and understanding. The scholarship provides funding of up to $12,500 per academic year.
@@ -106,9 +106,9 @@ const HomePage = () => {
             </div>
 
             {/* Stay updated with new section */}
-            <div className="newsmain d-flex justify-content-center align-items-center flex-column">
-                <center><h1 className='newstitle'>Stay Updated With a News</h1></center>
-                <div className="container d-flex justify-content-around align-items-center">
+            <div className="newsmain d-flex mt-3 justify-content-center align-items-center flex-column">
+                <center><h1 className='newstitle mt-4 mb-0'>Stay Updated With a News</h1></center>
+                <div className="container d-flex mt-2 justify-content-around align-items-center">
                     <div className="card mx-4" style={{ width: "25rem" }}>
                         <img src="./Images/News_1.png" className="card-img-top" alt="..." />
                         <div className="card-body-news">
@@ -132,7 +132,7 @@ const HomePage = () => {
             {/* Browse the Blogs section */}
             <div id="blog-sec" className="container-fluid d-flex justify-content-center align-items-center flex-column">
                 <center><h1 className='mt-3'>Browse the Blogs</h1></center>
-                <div className="container d-flex justify-content-around align-items-center">
+                <div className="container d-flex mt-0 justify-content-around align-items-center">
                     <div className="card mx-3" style={{ width: "33rem" }}>
                         <img src="./Images/Blog_1.png" className="card-img-top-blog" alt="..." />
                         <div className="card-body-blog">

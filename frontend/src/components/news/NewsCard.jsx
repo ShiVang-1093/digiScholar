@@ -22,6 +22,7 @@ const NewsCard = ({ id, image, title, description, createdAt }) => {
   return (
     <div className="news-card">
       <div className="news-content">
+        <img src={image} alt="error" />
         <h2 className='news-heading'>{title}</h2>
         <div className='news-description'><p className='news-desc'>{description}</p></div>
         <p className='news-timestamp'>{formattedTime}</p>

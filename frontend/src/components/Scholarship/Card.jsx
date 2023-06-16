@@ -20,7 +20,12 @@ export default function Card(prop) {
           <p>It is Provided by {prop.data.provided_by}</p>
         </div>
         <div className="deadline">
-          <p>Deadline : {prop.data.deadline}</p>
+          <p>Deadline: {(new Date(prop.data.deadline).toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric',
+          }))}</p>
+          {/* <p>Deadline : {prop.data.deadline}</p> */}
         </div>
         <div className="visitbtn">
           <Link to={`/scholarships/${prop.data._id}`} className="visit-button">
