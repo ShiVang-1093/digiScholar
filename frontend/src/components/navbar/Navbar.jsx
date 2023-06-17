@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './style.css';
-import Logo from "./DigiScholar.svg";
+import Logo from "./DigiScholar.png";
 import usericon from "./usericon.svg";
 import isLoggedin from '../../Helpers/isLoggedin';
 

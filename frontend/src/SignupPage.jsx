@@ -129,7 +129,7 @@ function SignupPage() {
           <div className="form1">
             <form>
               <label>
-                <div className="signup-fname">First name</div>
+                <div className="signup-fname">First name:</div>
                 <input
                   id="sp1"
                   type="firstname"
@@ -151,7 +151,7 @@ function SignupPage() {
               />
             </label> */}
               <label>
-                <div className="signup-lname">Last name</div>
+                <div className="signup-lname">Last name:</div>
                 <input
                   id="sp3"
                   type="lastname"
@@ -163,7 +163,7 @@ function SignupPage() {
               </label>
               <br />
               <label>
-                <div className="signup-mail">Email</div>
+                <div className="signup-mail">Email:</div>
                 <input
                   id="sp4"
                   type="email"
@@ -175,7 +175,7 @@ function SignupPage() {
               </label>
               <br />
               <label>
-                <div className="signup-contact">Contact No</div>
+                <div className="signup-contact">Contact No:</div>
                 <input
                   id="sp5"
                   type="contactno"
@@ -199,7 +199,7 @@ function SignupPage() {
             </label> */}
 
               <label>
-                <div className="signup-pwd">Password</div>
+                <div className="signup-pwd">Password:</div>
                 <input
                   id="sp7"
                   type="password"
@@ -222,8 +222,10 @@ function SignupPage() {
               />
             </label> */}
               <br />
-              <button type="submit" name="Create Account" id="sp9" onClick={handleLogin}>Create Account</button>
-              <div className="signup-login-account">Already have an account ? <Link to="/login">Login</Link></div>
+              <div className="d-flex justify-content-center align-items-center">
+                <button type="submit" name="Create Account" id="sp9" onClick={handleLogin}>Create Account</button>
+                <div className="signup-login-account text-align-center">Already have an account ? <Link to="/login">Login</Link></div>
+              </div>
             </form>
           </div>
         </div>

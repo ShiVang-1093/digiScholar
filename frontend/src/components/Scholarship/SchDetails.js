@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './SchDetails.css';
 import 'typeface-montserrat';
+import isLoggedIn from "../../Helpers/isLoggedin";
 
 
 const SchDetails = (props) => {
+  const isLoggedInUser = isLoggedIn();
   console.log("Data in sch details", props.scholarship);
   console.log("Eligibility in sch details", props.eligibility);
   const scholarshipData = props.scholarship;
@@ -22,11 +24,60 @@ const SchDetails = (props) => {
     setShowEligibility(false);
     setShowResources(true);
   };
+  const [formData, setFormData] = useState({
+    firstname: '',
+    lastname: '',
+    email: '',
+    houseno: '',
+    state: '',
+    age: '',
+    cast: '',
+    income: '',
+    contactNO: '',
+    city: '',
+    pincode: '',
+    gender: '',
+    qualification: '',
+  });
 
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
   // if (!scholarship) {
   //   return <div>Scholarship not found.</div>;
   // }
 
+  const handleSubmit = async () => {
+    const res = await fetch("http://localhost:5000/application/", {
+      method: "POST",
+      headers: {
+        "Authorization": "Bearer " + localStorage.getItem("jwt"),
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        scholarship: scholarshipData._id,
+        firstname: formData.firstname,
+        lastname: formData.lastname,
+        email: formData.email,
+        houseno: formData.houseno,
+        state: formData.state,
+        age: formData.age,
+        cast: formData.cast,
+        income: formData.income,
+        contactNO: formData.contactNO,
+        city: formData.city,
+        pincode: formData.pincode,
+      })
+    });
+    const data = await res.json();
+    if (res.status == 201) {
+      window.alert("Application Submitted Successfully");
+    }
+    else {
+      window.alert(data.error);
+      console.log("error in submitting: ", data.error);
+    }
+  }
   return (
     <div className="page-container">
       <div className='img-breif'>
@@ -60,194 +111,204 @@ const SchDetails = (props) => {
           <ul className='criterias'>
             <p>{eligibilityData}</p>
           </ul>
-          <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-
-            <div class="modal-dialog m0">
-              <div class="modal-content m1">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Apply for KC Mahindra Scholarship program </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          {
+            isLoggedInUser && (
+              <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>)
+          }
+          <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog m0">
+              <div className="modal-content m1">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel">Apply for KC Mahindra Scholarship program </h1>
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-
-                <div class="modal-body ">
-                  <div>basic details</div>
-
-
-                  <from className='modal-form'>
+                <div className="modal-body ">
+                  <div className="f-group-label" style={{ marginLeft: "3.2rem" }}>Basic Details</div>
+                  <form className='modal-form'>
                     <div className='modal-flex1'>
-                      <label className='modal-fields'>
-                        <div className="apply-fname">First name</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-fname mb-1">First name: </div>
                         <input
                           className='modal-IO-fields'
                           id="apl1"
-                          type="firstname"
+                          type="text"
                           name="firstname"
-                          // onChange={handleChange}
-                          required placeholder="Enter your First name"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your First name"
+                          value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-email">Email</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3 mb-3'>
+                        <div className="apply-email ">Email:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl3"
-                          type="Email"
-                          name="Email"
-                          // onChange={handleChange}
-                          required placeholder="Enter your Email id"
-                        // value={formData.firstname}
+                          type="email"
+                          name="email"
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your Email id"
+                          value={formData.email}
                         />
-                      </label>
-                      <div>Address details</div>
-                      <label className='modal-fields'>
-                        <div className="apply-houseNo">House no/Streets</div>
+                      </label> <br />
+                      <div className="f-group-label" style={{ marginLeft: "3rem" }}>Address Details</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-houseNo">House no/Streets:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl5"
-                          type="houseno"
+                          type="text"
                           name="houseno"
-                          // onChange={handleChange}
-                          required placeholder="Enter your house no"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your house no"
+                          value={formData.houseno}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-houseNo">State</div>
+                      </label> <br />
+                      <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-houseNo">State:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl7"
-                          type="state"
+                          type="text"
                           name="state"
-                          // onChange={handleChange}
-                          required placeholder="Enter State"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter State"
+                          value={formData.state}
                         />
-                      </label>
-                      <div>personal details</div>
-                      <label className='modal-fields'>
-                        <div className="apply-age">Age</div>
+                      </label> <br />
+                      <div className="f-group-label">Personal Details:</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-age">Age:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl9"
-                          type="age"
+                          type="number"
                           name="age"
-                          // onChange={handleChange}
-                          required placeholder="Enter Your age"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter Your age"
+                          value={formData.age}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-cast">cast</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-cast">Cast:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl11"
-                          type="cast"
+                          type="text"
                           name="cast"
-                          // onChange={handleChange}
-                          required placeholder="Enter your caste"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your caste"
+                          value={formData.cast}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-income">Income</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-income">Income:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl13"
-                          type="Income"
-                          name="Income"
-                          // onChange={handleChange}
-                          required placeholder="Enter your Income"
-                        // value={formData.firstname}
+                          type="number"
+                          name="income"
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your Income"
+                          value={formData.income}
                         />
-                      </label>
+                      </label> <br />
                     </div>
 
-
                     <div className='modal-flex2'>
-                      <label className='modal-fields'>
-                        <div className="apply-lname">Last name</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-lname">Last Name:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl2"
-                          type="lastname"
+                          type="text"
                           name="lastname"
-                          // onChange={handleChange}
-                          required placeholder="Enter your Last name"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your Last name"
+                          value={formData.lastname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-number">Contact no</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-number">Contact No:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl4"
-                          type="contactNO"
+                          type="text"
                           name="contactNO"
-                          // onChange={handleChange}
-                          required placeholder="Enter your Contact No"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your Contact No"
+                          value={formData.contactNO}
                         />
-                      </label>
+                      </label> <br />
                       <br />
-                      <label className='modal-fields'>
-                        <div className="apply-city">City</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">City:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl6"
-                          type="city"
+                          type="text"
                           name="city"
-                          // onChange={handleChange}
-                          required placeholder="Enter your City"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your City"
+                          value={formData.city}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-city">pincode</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">PinCode:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl8"
-                          type="pincode"
+                          type="text"
                           name="pincode"
-                          // onChange={handleChange}
-                          required placeholder="Enter your pincode"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your pincode"
+                          value={formData.pincode}
                         />
-                      </label>
+                      </label> <br />
                       <br />
-                      <label className='modal-fields'>
-                        <div className="apply-gender">Gender</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-gender">Gender:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl10"
-                          type="gender"
+                          type="text"
                           name="gender"
-                          // onChange={handleChange}
-                          required placeholder="Enter your gender"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your gender"
+                          value={formData.gender}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-city">Highest qualification</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">Highest qualification:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl12"
-                          type="qualification"
+                          type="text"
                           name="qualification"
-                          // onChange={handleChange}
-                          required placeholder="Enter your Highest qualification"
-                        // value={formData.firstname}
+                          onChange={handleChange}
+                          required
+                          placeholder="Enter your Highest qualification"
+                          value={formData.qualification}
                         />
-                      </label>
+                      </label> <br />
                     </div>
-                  </from>
+                  </form>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">submit  </button>
+                <div className="modal-footer">
+                  <button type="button" className="btn btn-secondary form-button-sch" data-bs-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-primary form-button-sch" onClick={handleSubmit}>Submit  </button>
                 </div>
               </div>
             </div>
@@ -265,26 +326,23 @@ const SchDetails = (props) => {
               </li>
             ))} */}
           </ul>
-          <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>
-          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-
-            <div class="modal-dialog m0">
-              <div class="modal-content m1">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">Apply for KC Mahindra Scholarship program </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          {
+            isLoggedInUser && (
+              <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>)
+          }
+          <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div className="modal-dialog m0">
+              <div className="modal-content m1">
+                <div className="modal-header">
+                  <h1 className="modal-title fs-5" id="staticBackdropLabel">Apply for scholarship here:  </h1>
+                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-
-
-                <div class="modal-body ">
-                  <div>basic details</div>
-
-
-                  <from className='modal-form'>
+                <div className="modal-body ">
+                  <div className="f-group-label" style={{ marginLeft: "3.2rem" }}>Basic Details</div>
+                  <form className='modal-form'>
                     <div className='modal-flex1'>
-                      <label className='modal-fields'>
-                        <div className="apply-fname">First name</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-fname">First Name:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl1"
@@ -294,9 +352,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your First name"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-email">Email</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-email">Email:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl3"
@@ -306,10 +364,10 @@ const SchDetails = (props) => {
                           required placeholder="Enter your Email id"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <div>Address details</div>
-                      <label className='modal-fields'>
-                        <div className="apply-houseNo">House no/Streets</div>
+                      </label> <br />
+                      <div className="f-group-label" >Address Details</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-houseNo">House no/Streets:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl5"
@@ -319,9 +377,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your house no"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-houseNo">State</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-houseNo">State:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl7"
@@ -331,10 +389,10 @@ const SchDetails = (props) => {
                           required placeholder="Enter State"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <div>personal details</div>
-                      <label className='modal-fields'>
-                        <div className="apply-age">Age</div>
+                      </label> <br />
+                      <div className="f-group-label">Personal Details</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-age">Age:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl9"
@@ -344,9 +402,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter Your age"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-cast">cast</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-cast">Cast:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl11"
@@ -356,9 +414,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your caste"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-income">Income</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-income">Income:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl13"
@@ -368,13 +426,13 @@ const SchDetails = (props) => {
                           required placeholder="Enter your Income"
                         // value={formData.firstname}
                         />
-                      </label>
+                      </label> <br />
                     </div>
 
 
                     <div className='modal-flex2'>
-                      <label className='modal-fields'>
-                        <div className="apply-lname">Last name</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-lname">Last name:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl2"
@@ -384,9 +442,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your Last name"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-number">Contact no</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-number">Contact No:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl4"
@@ -396,10 +454,10 @@ const SchDetails = (props) => {
                           required placeholder="Enter your Contact No"
                         // value={formData.firstname}
                         />
-                      </label>
+                      </label> <br />
                       <br />
-                      <label className='modal-fields'>
-                        <div className="apply-city">City</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">City:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl6"
@@ -409,9 +467,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your City"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-city">pincode</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">PinCode:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl8"
@@ -421,10 +479,10 @@ const SchDetails = (props) => {
                           required placeholder="Enter your pincode"
                         // value={formData.firstname}
                         />
-                      </label>
+                      </label> <br />
                       <br />
-                      <label className='modal-fields'>
-                        <div className="apply-gender">Gender</div>
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-gender">Gender:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl10"
@@ -434,9 +492,9 @@ const SchDetails = (props) => {
                           required placeholder="Enter your gender"
                         // value={formData.firstname}
                         />
-                      </label>
-                      <label className='modal-fields'>
-                        <div className="apply-city">Highest qualification</div>
+                      </label> <br />
+                      <label className='modal-fields w-50 mb-3'>
+                        <div className="apply-city">Highest Qualification:</div>
                         <input
                           className='modal-IO-fields'
                           id="apl12"
@@ -446,22 +504,21 @@ const SchDetails = (props) => {
                           required placeholder="Enter your Highest qualification"
                         // value={formData.firstname}
                         />
-                      </label>
+                      </label> <br />
                     </div>
-                  </from>
+                  </form>
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">submit  </button>
+                <div className="modal-footer">
+                  <button type="button" className="btn form-button-sch text-dark" data-bs-dismiss="modal">Close</button>
+                  <button type="button" className="btn form-button-sch" onClick={handleSubmit}>Submit</button>
                 </div>
               </div>
             </div>
           </div>
-
-
         </div>
-      )}
-    </div>
+      )
+      }
+    </div >
   );
 };
 

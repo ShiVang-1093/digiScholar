@@ -1,6 +1,7 @@
 const { Application } = require('../models');
 
 exports.createApplication = async (req, res) => {
+    console.log("in create app : ", req.body);
     try {
         req.body.user = req.user.id;
         const test = await Application.findOne({

@@ -30,7 +30,7 @@
 
 .login-heading2 {
   font-weight: 600;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 48px;
   overflow: hidden;
   margin-top: 2rem;
@@ -71,11 +71,12 @@
 }
 
 .login-password {
+  font-family: 'Inter';
   font-style: normal;
   font-size: 20px;
   line-height: 24px;
+  background-color: #fff;
   margin-left: 12%;
-  margin-top: 2rem;
 }
 
 #dcs3 {
@@ -116,6 +117,10 @@
   font-weight: bold;
   font-size: 30px;
   background-color: #fff;
+}
+
+.form-label {
+  margin-left: 6rem;
 }
 
 #dsc1 {
