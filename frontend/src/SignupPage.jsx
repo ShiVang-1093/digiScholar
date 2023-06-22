@@ -35,15 +35,6 @@ function SignupPage() {
     console.log('institute:', formData.institute);
     console.log('Password:', formData.password);
     console.log('COnfirm Password:', formData.cpassword);
-
-    setFormData({
-      firstname: '',
-      middlename: '',
-      lastname: '',
-      email: '',
-      contactno: '',
-      password: '',
-    });
     console.log(JSON.stringify({
       fname: formData.firstname,
       lname: formData.lastname,
@@ -68,55 +59,17 @@ function SignupPage() {
     });
     const resJson = await res.json();
     console.log("Resjson : ", resJson);
-    if (res.status == 400 || res.status == 500 || !res) {
-      window.alert("An error occurred");
-      console.log("An error occurred");
-    }
-    else if (res.status == 200) {
+    if (res.status == 200) {
       window.alert("Account successfully created Successful");
       localStorage.setItem("jwt", resJson.token);
       console.log("Login Successful");
       window.location.href = "/";
     }
+    else {
+      window.alert(resJson.errors[0]);
+      console.log("An error occurred");
+    }
   };
-
-  // const handleLogin = (event) => {
-  //   event.preventDefault();
-  //   console.log("Email:", email);
-  //   console.log("Password:", password);
-
-  //   // Perform login logic here
-  //   setError("");
-
-  //   // Send login credentials to the server
-  //   fetch("/api/login", {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify({ email, password }),
-  //   })
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       if (data.error) {
-  //         setError(data.error);
-  //       } else {
-  //         // Store the JWT token in local storage or a secure cookie
-  //         localStorage.setItem("token", data.token);
-  //         // Redirect or perform other actions after successful login
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       setError("An error occurred. Please try again.");
-  //       console.error(error);
-  //     });
-  // };
-
-  const validatePassword = () => {
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()]).{8,}$/;
-    return passwordRegex.test(formData.password);
-  };
-
   return (
     <div className="signup-wrapper">
       <div className="signup-container">
