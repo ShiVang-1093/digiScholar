@@ -21,12 +21,12 @@ const MyFaq = ({ question, answer, index }) => {
                 <div className="accordion" id={accordionId}>
                     <div className="accordion-item m-0">
                         <h2 className="accordion-header">
-                            <button className={`accordion-button ${show ? "" : "collapsed"}`} type="button" onClick={toggleAccordion} aria-expanded={show ? "true" : "false"} aria-controls={collapseId}>
+                            <button id="acc-btn" className={`accordion-button ${show ? "" : "collapsed"}`} type="button" onClick={toggleAccordion} aria-expanded={show ? "true" : "false"} aria-controls={collapseId}>
                                 {question}
                             </button>
                         </h2>
                         <div id={collapseId} className={`accordion-collapse collapse ${show ? "show" : ""}`} data-bs-parent={`#${accordionId}`}>
-                            <div className="accordion-body">
+                            <div id="acc-ans" className="accordion-body">
                                 {answer}
                             </div>
                         </div>

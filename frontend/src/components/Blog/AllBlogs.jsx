@@ -38,14 +38,12 @@ function AllBlogs() {
         <div className="grid">
           {data.map((post) => {
             return (
-              <div className="card" key={post._id}>
+              <div className="card-for-blog" key={post._id}>
                 <img className="temp-image" src="./Images/temp_1.png  "  alt={"Error"} />
-                  <p>"{post.content}"</p>
+                  <p>"{post.title.slice(0,80)}..."</p>
                 <Link to={`/blog/${post._id}`} className="link">
-                  <div className="postAuthor">{post.title}</div>
+                  <div className="postAuthor">{post.content.slice(0,15)}...</div>
                 </Link><br /><br />
-                {/* <span className="createdAt">CreatedAt :{post.createdAt}</span> */}
-                {/* <span className="updatedAt">UpdatedAt :{post.updatedAt}</span> */}
               </div>
             );
           })}

@@ -17,9 +17,8 @@
     margin-left: 5%;
 }
 
-.card {
+.card-for-blog{
     text-align: left;
-    font-family: "Inter";
     margin-bottom: 2%;
     padding: 10px;
     background: #ffffff;
@@ -34,12 +33,12 @@
     border-radius: 15px;
 }
 
-.card:hover {
+.card-for-blog:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.card > p {
+.card-for-blog > p {
     margin-top: 15%;
     font-family: "Montserrat";
     font-style: normal;
@@ -89,7 +88,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 25px;
-    margin-top: 15px;
+    margin-top: 45px;
     display: block;
     color: grey;
     text-align: left;
