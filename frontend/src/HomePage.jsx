@@ -53,7 +53,7 @@ const HomePage = () => {
                     <img src="./Images/Testi_Home_2.png" className="card-img-top" alt="Testi_Story" />
                     <div className="card-body">
                         <h5 className="card-title">“I continue to be thankful for financial support.”</h5>
-                        <p className="card-text">Recipient of the Jane Phillips Donaldson Scholarship</p>
+                        <p className="card-text">Recipient of the Jane Phillips Donaldson Scholarship.Recipient of the Lawrence Reuss and Florence House</p>
                         <div className="btnknowmore d-flex justify-content-center align-items-center">
                             <a href="#" className="btn btn-primary testi-btn">Know More</a>
                         </div>
@@ -96,7 +96,7 @@ const HomePage = () => {
                             <p>
                                 The International Peace Scholarship is a prestigious award offered to women from countries outside the United States and Canada who are pursuing graduate degrees in any field of study. The scholarship is administered by the P.E.O. Sisterhood, a philanthropic organization dedicated to empowering women through education. Recipients are chosen based on their academic achievements, financial need, and dedication to promoting peace and understanding. The scholarship provides funding of up to $12,500 per academic year.
                             </p>
-                            <a href="#" className="btnlearnmore btn-primary">Learn More</a>
+                            <a href="#" className="btnlearnmore2 btn-primary">Learn More</a>
                         </div>
                     </div>
                     <div className="thirdimage col-md-6">
@@ -105,7 +105,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            {/* Stay updated with new section */}
+            {/* Stay updated with news section */}
             <div className="newsmain d-flex mt-3 justify-content-center align-items-center flex-column">
                 <center><h1 className='newstitle mt-4 mb-0'>Stay Updated With a News</h1></center>
                 <div className="container d-flex mt-2 justify-content-around align-items-center">
@@ -258,19 +258,19 @@ const HomePage = () => {
                                 <NavLink to="/" className="faq-options text-decoration-none">Home</NavLink>
                             </li>
                             <li className='faq-options-li'>
-                                <NavLink to="/scholarship" className="faq-options text-decoration-none">Scholarship</NavLink>
+                                <NavLink to="/scholarships" className="faq-options text-decoration-none">Scholarship</NavLink>
                             </li>
                             <li className='faq-options-li'>
-                                <NavLink to="/blogs" className="faq-options text-decoration-none">Blogs</NavLink>
+                                <NavLink to="/Blog" className="faq-options text-decoration-none">Blogs</NavLink>
                             </li>
                             <li className='faq-options-li'>
                                 <NavLink to="/news" className="faq-options text-decoration-none text-decoration-none">News</NavLink>
                             </li>
                             <li className='faq-options-li'>
-                                <NavLink to="/testimonials" className="faq-options text-decoration-none">Testimonials</NavLink>
+                                <NavLink to="/testimonial" className="faq-options text-decoration-none">Testimonials</NavLink>
                             </li>
                             <li className='faq-options-li'>
-                                <NavLink to="/faqs" className="faq-options text-decoration-none">FAQs</NavLink>
+                                <NavLink to="/faq" className="faq-options text-decoration-none">FAQs</NavLink>
                             </li>
                         </div>
                         <div className="digiimg col-9 d-flex justify-content-center align-items-center">
@@ -284,3 +284,4 @@ const HomePage = () => {
 }
 
 export default HomePage;
+

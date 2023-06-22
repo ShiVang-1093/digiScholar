@@ -144,8 +144,13 @@ Responsive
     margin-bottom: 10px;
   }
 } */
+#acc-btn{
+  background-color: #E3F3F9;
+}
+#acc-ans{
+  background-color: #E3F3F9;
 
-
+}
 
 /* still have question */
 .contact-us {
@@ -155,6 +160,9 @@ Responsive
   padding: 20px;
   background-color: #F6F6F6; /* Light Sky Blue */
   margin-top: 20px;
+}
+.still-que{
+  background-color:#F6F6F6;
 }
 .still-que h3{
   font-family: 'Montserrat';

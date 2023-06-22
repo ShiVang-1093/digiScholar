@@ -33,10 +33,10 @@ function Blog() {
         <Link to="/Blog" className="back-link">
           <span className="back-arrow">&#8592;</span> Back
         </Link>
-        <h2 className="Author-name">"{title.toUpperCase()}"</h2>
+        <h2 className="Author-name">"{content.toUpperCase()}"</h2>
         <div className="singlepost">
           <img className="Author-image" src={image} alt={"Error"} />
-          <p className="content">{content}</p>
+          <p className="content">{title}</p>
         </div>
         {/* <ul className="ulitems">
         {pointsArray.map((point) => (
@@ -55,6 +55,3 @@ function Blog() {
 }
 
 export default Blog;
-
-
-

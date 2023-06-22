@@ -1,13 +1,15 @@
 /* Contact us form */
 /* Contact us form */
+/* Contact us form */
+/* Contact us form */
 .faq-flex1 {
-  margin-top: 3%;
+  margin-top: -2%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
-  background-color: #E3F3F9;
+  height: 80vh;
+  background-color: #F2F5FF;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
 }
@@ -19,8 +21,9 @@
   font-size: 32px;
   line-height: 44px;
   color: black;
-  background-color: #E3F3F9;
+  background-color: #F2F5FF;
   margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .contact-form {
@@ -90,6 +93,96 @@
     text-align: left;
   }
 }
+
+
+
+/* .faq-flex1 {
+  margin-top: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  background-color: #f2f5ff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+.contactus-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  color: black;
+  background-color: #f2f5ff;
+  margin-bottom: 2%;
+}
+
+.contact-form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.doubt-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.faq-lable {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex-basis: 45%;
+}
+.faq-field{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 44px;
+}
+
+.faq-fields
+{
+  padding: 10px;
+  border: 1px solid rgb(78, 172, 255);
+  border-radius: 5px;
+  outline: none;
+  width: 100%; 
+}
+
+.faq-massage {
+  padding: 5px;
+  border: 1px solid rgb(78, 172, 255);
+  border-radius: 5px;
+  outline: none;
+  height: 4rem;
+  width: 213%; 
+}
+
+.sub-btn {
+  background-color: rgb(78, 172, 255);
+  color: white;
+  border: none;
+  border-radius: 60px;
+  padding: 1% 3%; 
+  cursor: pointer;
+  margin-left: 44%;
+  margin-right: 44%;
+  align-self: flex-start; 
+  margin-top: 10px;
+}
+.contact-us {
+  @media (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+} */
 
 
 

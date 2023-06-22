@@ -17,7 +17,7 @@ export default function Card(prop) {
         <div className="card-content">
           <p>{prop.data.description}</p>
           <p>Amount : &#8377;{prop.data.amount}/-</p>
-          <p>It is Provided by {prop.data.provided_by}</p>
+          <p>It is Available for {prop.data.provided_by}</p>
         </div>
         <div className="deadline">
           <p>Deadline: {(new Date(prop.data.deadline).toLocaleDateString('en-GB', {
