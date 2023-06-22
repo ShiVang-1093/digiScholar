@@ -72,10 +72,24 @@
     border: 2px solid #0cb6f0 !important;
 }
 
-.btnlearnmore:hover {
+.btnlearnmore2 {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    padding: 9px;
     background: #0cb6f0;
     border-radius: 50px;
     border: 2px solid #0cb6f0 !important;
+}
+
+.btnlearnmore:hover {
+    background: #0cb6f0;
+    opacity: 0.8;
+}
+
+.btnlearnmore2:hover {
+    background: #0cb6f0;
+    opacity: 0.8;
 }
 
 
@@ -83,6 +97,7 @@
 .card-body {
     background-color: #dbe3fd !important;
     border-radius: 0px 0px 60px 60px;
+    height:300px;
 }
 
 .card-title,
@@ -168,7 +183,7 @@ p {
 
 .testi-second-story {
     border-radius: 0px 0px 60px 60px;
-    margin-top: 4.4%;
+    margin-top: 8%;
 }
 
 .testi-second-story:hover {
@@ -230,6 +245,7 @@ center {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
+    margin-top: 8%;
 }
 
 .morenews {
@@ -345,6 +361,7 @@ center {
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
+    margin-top: 8%;
 }
 
 .card-img-top-blog {
@@ -432,7 +449,7 @@ center>p {
 }
 
 #more-questions {
-    margin-left: 70%;
+    margin-left: 85%;
     width: 11%;
     margin-right: 20%;
     margin-top: 2%;

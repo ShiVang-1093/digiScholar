@@ -153,7 +153,6 @@ export default function ScholarshipMain() {
                     className="main-image"
                     src="./Images/image 5.png"
                     alt="Error"
-                    srcSet=""
                 />
             </div>
             {renderCards()}
