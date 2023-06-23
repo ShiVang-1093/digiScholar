@@ -33,53 +33,53 @@ function ContactUs() {
     console.log('Password:', formData.message);
 
     setFormData({
-        firstname: '',
-        lastname: '',
-        email: '',
-        contactno: '',
-        message: '',
+      firstname: '',
+      lastname: '',
+      email: '',
+      contactno: '',
+      message: '',
     });
   };
 
   return (
-      <div className="faq-flex1">
-        <div className="contactus-title">If you have any query you can reach out to us</div>
-        <div className="contact-form">
+    <div className="faq-flex1">
+      <div className="contactus-title">REACH OUT TO US...!</div>
+      <div className="contact-form">
         <form className="doubt-form">
-        <label className="faq-lable">
-            <div className="faq-field">First name:</div>            
-            <input 
+          <label className="faq-lable">
+            <div className="faq-field">First name:</div>
+            <input
               className="faq-fields"
               type="firstname"
               name="firstname"
-              onChange={handleChange} 
+              onChange={handleChange}
               placeholder="Enter your First name"
               value={formData.firstname}
               required
             />
           </label>
           <label className="faq-lable">
-            <div className="faq-field">Last name:</div>            
+            <div className="faq-field">Last name:</div>
             <input
               className="faq-fields"
               type="lastname"
               name="lastname"
-              onChange={handleChange} 
-              required 
+              onChange={handleChange}
+              required
               placeholder="Enter your Last name"
               value={formData.lastname}
             />
           </label>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <label className="faq-lable">
             <div className="faq-field">Email:</div>
             <input
               className="faq-fields"
               type="email"
               name="email"
-              onChange={handleChange} 
-              required 
+              onChange={handleChange}
+              required
               placeholder="abc@gmail.com"
               value={formData.email}
             />
@@ -90,30 +90,30 @@ function ContactUs() {
               className="faq-fields"
               type="contactno"
               name="contactno"
-              onChange={handleChange} 
-              required 
-              placeholder = "Enter your contact number"
+              onChange={handleChange}
+              required
+              placeholder="Enter your contact number"
               value={formData.contactno}
             />
           </label>
-          <br/>
+          <br />
           <label className="faq-lable">
-          <div className="faq-field">Message:</div>
+            <div className="faq-field">Message:</div>
             <input
-            className="faq-massage"
+              className="faq-massage"
               type="message"
               name="message"
               onChange={handleChange}
-              required 
+              required
               value={formData.message}
             />
           </label>
-          <br/>
-          <br/>
+          <br />
+          <br />
           <button className="sub-btn" onClick={handleLogin}>Submit</button>
         </form>
-        </div>
       </div>
+    </div>
   );
 }
 export default ContactUs;

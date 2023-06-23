@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
+import Footer from "./Footer";
 import LoginPage from './LoginPage';
 import ScholarshipMain from './components/Scholarship/ScholarshipMain';
 import SignupPage from './SignupPage';
@@ -34,6 +35,7 @@ const App = () => {
         <Route path="/scholarships" element={<ScholarshipMain />} />
         {/* <Route path="/scholarships/:id" element={<SchDetails />} /> */}
       </Routes>
+      <Footer />
     </Router>
   );
 };

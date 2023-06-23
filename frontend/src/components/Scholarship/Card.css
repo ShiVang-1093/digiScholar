@@ -7,7 +7,7 @@
   border-radius: 45px;
   /* border: 5px solid red; */
   margin-bottom: -2%;
-  margin-top:5%;
+  margin-top: 5%;
   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
   margin-left: 3%;
   margin-right: 3%;
@@ -135,9 +135,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.visitbtn {
-  margin-left: 35%;
-}
 
 .visit-button {
   display: inline-block;
@@ -150,8 +147,8 @@
   font-size: 16px;
   margin-top: 1.5%;
   margin-bottom: 1.5%;
-  margin-left: 50%;
   transition: transform 0.3s ease-in-out;
+  margin-left: 35%;
 }
 
 .text-center {

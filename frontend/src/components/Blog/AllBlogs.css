@@ -9,7 +9,7 @@
     max-width: 80rem;
     border-radius: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     justify-content: center;
     align-items: center;
@@ -17,7 +17,7 @@
     margin-left: 5%;
 }
 
-.card-for-blog{
+.card-for-blog {
     text-align: left;
     margin-bottom: 2%;
     padding: 10px;
@@ -38,7 +38,7 @@
     transform: scale(1.05);
 }
 
-.card-for-blog > p {
+.card-for-blog>p {
     margin-top: 15%;
     font-family: "Montserrat";
     font-style: normal;
@@ -62,7 +62,7 @@
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.head > h1 {
+.head>h1 {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 800;
@@ -73,7 +73,7 @@
     padding-top: 5px;
 }
 
-.head > h5 {
+.head>h5 {
     font-family: "Montserrat";
     font-style: normal;
     font-weight: 600;
@@ -82,6 +82,7 @@
     text-align: center;
     color: #191919;
 }
+
 .postAuthor {
     font-family: "Montserrat";
     font-style: normal;
@@ -98,4 +99,3 @@
 .link {
     text-decoration: none;
 }
-

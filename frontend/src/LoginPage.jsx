@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import "./LoginPage.css";
 import isLoggedin from "./Helpers/isLoggedin";
 
@@ -95,7 +95,7 @@ function LoginPage() {
               <br />
               {<button type="submit" className="mt-3 mb-3" name="Login" onClick={handleLogin} id="dsc1">Login</button>}
             </form>
-            {<div id="dcs7" className="mt-0">Don't have an account ? <Link to="/signup">Create Account</Link></div>}
+            {<div id="dcs7" className="mt-0">Don't have an account ? <NavLink className="btn " to="/signup">Create Account</NavLink></div>}
           </div>
         </div>
         <div className="login-flex2">

@@ -36,7 +36,7 @@
   margin-right: 4%;
   display: flex;
   gap: 15px;
-  justify-content: space-around;
+  justify-content: start;
   flex-wrap: wrap;
   background-color: #F2F5FF;
 

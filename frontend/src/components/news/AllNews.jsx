@@ -21,9 +21,9 @@ const AllNews = () => {
   else {
     return (
       <>
-        <div className="news-box">
+        <div className="news-box mt-4">
           <center>
-            <div className="news-title" style={{ backgroundColor: "#E3F3F9" }}>
+            <div className="news-title mt-4" style={{ backgroundColor: "#E3F3F9" }}>
               <center>
                 <h1>News</h1>
                 <p>Stay current with all  the latest scholarships , applications and more.</p>

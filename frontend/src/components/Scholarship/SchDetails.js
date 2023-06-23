@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './SchDetails.css';
 import 'typeface-montserrat';
 import isLoggedIn from "../../Helpers/isLoggedin";
@@ -114,6 +115,10 @@ const SchDetails = (props) => {
           {
             isLoggedInUser && (
               <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>)
+          }
+          {
+            !isLoggedInUser && (
+              <NavLink className='apply-now btn btn-primary' to="/login">Login to Apply</NavLink>)
           }
           <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog m0">
@@ -329,6 +334,10 @@ const SchDetails = (props) => {
           {
             isLoggedInUser && (
               <button className='apply-now btn btn-primary' data-bs-toggle="modal" data-bs-target="#staticBackdrop">Apply Now</button>)
+          }
+          {
+            !isLoggedInUser && (
+              <NavLink className='apply-now btn btn-primary' to="/login">Login to Apply</NavLink>)
           }
           <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div className="modal-dialog m0">

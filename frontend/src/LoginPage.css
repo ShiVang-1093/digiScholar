@@ -4,15 +4,15 @@
 .login-wrapper {
   background-color: #E3F3F9;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   overflow-y: hidden;
 }
 
 .login-container {
   display: flex;
   flex-direction: row;
-  height: 82vh;
-  width: 80%;
+  height: 100%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 2%;
   border-radius: 85px;
@@ -30,7 +30,7 @@
 
 .login-heading2 {
   font-weight: 600;
-  font-size: 30px;
+  font-size: 20px;
   line-height: 48px;
   overflow: hidden;
   margin-top: 2rem;
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   width: 60%;
-  height: 99% ;
+  height: 99%;
 }
 
 .login-heading {
@@ -82,7 +82,7 @@
 
 #dcs3 {
   width: 75%;
-  height: 5%;
+  height: 1%;
   margin: 0 auto;
   margin-top: 1rem;
   border-color: #0cb6f0;
@@ -95,7 +95,7 @@
 }
 
 #dcs4::placeholder {
-  font-size: 20px;
+  font-size: 1%;
   opacity: 0.6;
   margin-top: 0;
   margin-bottom: auto;

@@ -38,16 +38,17 @@ function AllBlogs() {
         <div className="grid">
           {data.map((post) => {
             return (
-              <div className="card-for-blog" key={post._id}>
-                <img className="temp-image" src="./Images/temp_1.png  "  alt={"Error"} />
-                  <p>"{post.title.slice(0,80)}..."</p>
+              <div className="card-for-blog d-flex justify-content-center align-items-center flex-column" key={post._id}>
+                <img className="temp-image" src="./Images/temp_1.png  " alt={"Error"} />
+                <p>"{post.title.slice(0, 80)}..."</p>
                 <Link to={`/blog/${post._id}`} className="link">
-                  <div className="postAuthor">{post.content.slice(0,15)}...</div>
+                  <div className="postAuthor">{post.content.slice(0, 15)}...</div>
                 </Link><br /><br />
               </div>
             );
           })}
         </div>
+        <div className="mb-4"></div>
       </div >
 
     );

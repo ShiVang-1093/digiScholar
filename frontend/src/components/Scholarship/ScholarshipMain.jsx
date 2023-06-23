@@ -8,7 +8,7 @@ export default function ScholarshipMain() {
     const [searchTerm, setSearchTerm] = useState("");
     const [sortBy, setSortBy] = useState("default");
     const [availability, setAvailability] = useState("all");
-    const [sortedData, setSortedData] = useState([]);
+    const [sortedData, setSortedData] = useState(null);
     const [data, setData] = useState([]);
 
     const getScholarshipData = async () => {
@@ -90,11 +90,10 @@ export default function ScholarshipMain() {
 
     const renderCards = () => {
         if (!sortedData) {
-            return <h2>Loading...</h2>;
+            return <h1>Loading... !</h1>
         }
-
         if (sortedData.length === 0) {
-            return <h2>No scholarships found.</h2>;
+            return <h2>Loading...!</h2>;
         }
         return (
             <div className="data-main d-flex flex-column">
@@ -159,4 +158,3 @@ export default function ScholarshipMain() {
         </>
     );
 }
-

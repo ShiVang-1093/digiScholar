@@ -10,7 +10,7 @@ export default function Card(prop) {
   // const flexDirecton = isOdd ? "row" : "row-reverse";
 
   return (
-    <div className="Card-main justify-content-center align-items-center">
+    <div className="Card-main justify-content-center align-items-center mb-4">
       <img className="card-image" src={prop.data.image} alt="Error" />
       <div className="card-point d-flex justify-content-center align-itmes-center flex-column">
         <div className="title">{prop.data.name.toUpperCase()}</div>

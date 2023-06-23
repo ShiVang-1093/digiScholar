@@ -46,7 +46,7 @@ const Details = () => {
   }, [scholarship]);
 
   if (!scholarship) {
-    return <div>Scholarship not found.</div>;
+    return <h2>Loading...!</h2>;
   }
   else {
     return (
