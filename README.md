@@ -68,12 +68,12 @@ That's it! You have successfully set up and run the DigiScholar project on your 
 
 ## Features
 
-- [-] Develop an eligibility criteria page that outlines the qualifications needed to be eligible for a scholarship.
-- [-] Create an online scholarship application form that integrates with the website to simplify the application process.
-- [-] Design a scholarship FAQs page that provides answers to commonly asked questions about the scholarship process and guidelines.
-- [-] Develop a scholarship resources page that provides links to other websites and resources that can help students find scholarships and apply for them.
-- [-] Build a scholarship news page that provides updates on new scholarship opportunities and any changes to existing scholarships.
-- [-] Develop a scholarship testimonials page that features success stories from past scholarship recipients to encourage other students to apply.
-- [-] Create a scholarship blog page that provides articles and blog posts about the scholarship process, tips for finding and applying for scholarships, and other related topics.
-- [-] Develop a scholarship directory page that provides information on eligibility requirements, application deadlines, and more.
-```
+- [x] Develop an eligibility criteria page that outlines the qualifications needed to be eligible for a scholarship.
+- [x] Create an online scholarship application form that integrates with the website to simplify the application process.
+- [x] Design a scholarship FAQs page that provides answers to commonly asked questions about the scholarship process and guidelines.
+- [x] Develop a scholarship resources page that provides links to other websites and resources that can help students find scholarships and apply for them.
+- [x] Build a scholarship news page that provides updates on new scholarship opportunities and any changes to existing scholarships.
+- [x] Develop a scholarship testimonials page that features success stories from past scholarship recipients to encourage other students to apply.
+- [x] Create a scholarship blog page that provides articles and blog posts about the scholarship process, tips for finding and applying for scholarships, and other related topics.
+- [x] Develop a scholarship directory page that provides information on eligibility requirements, application deadlines, and more.
+
